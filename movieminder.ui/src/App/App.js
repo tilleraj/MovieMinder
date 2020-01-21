@@ -12,6 +12,7 @@ import 'firebase/auth';
 import firebaseConnection from '../requests/connection';
 
 import Auth from '../components/Auth/Auth';
+import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
 
 import './App.scss';
@@ -37,6 +38,8 @@ class App extends React.Component {
     authed: false,
   };
 
+  logout = () => this.setState({ authed: false });
+
   componentDidMount() {
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -57,6 +60,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          <NavBar authed={authed} logout={this.logout} />
           <div className="container">
             <div className="row">
               <Switch>

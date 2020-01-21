@@ -16,9 +16,9 @@ class Auth extends React.Component {
     return (
       <div className="Auth col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
         <div className="card">
-          <h1>Welcome to Hitch a Ride!</h1>
-          <p>Looking to split a Lyft to Hope and Andrew's wedding?</p>
-          <p>Driving yourself and have some extra seats?</p>
+          <h1>Welcome to MovieMinder!</h1>
+          <p>Always meaning to go to movies in theaters?</p>
+          <p>Always forgetting to see those movies before they leave?</p>
           <p>You're in the right place!</p>
           <Button color="secondary" onClick={this.loginClickEvent}>Login with Google</Button>
         </div>
