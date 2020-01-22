@@ -1,0 +1,1945 @@
+[
+  {
+    "tmsId": "MV007920380000",
+    "rootId": "12028834",
+    "subType": "Feature Film",
+    "title": "Bad Boys for Life",
+    "releaseYear": 2020,
+    "releaseDate": "2020-01-16",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "longDescription": "Old-school cops Mike Lowrey and Marcus Burnett team up with an elite unit to take down the vicious leader of a Miami drug cartel.",
+    "shortDescription": "Old-school cops team up with an elite unit to take down the vicious leader of a Miami drug cartel.",
+    "topCast": [
+      "Will Smith",
+      "Martin Lawrence",
+      "Vanessa Hudgens"
+    ],
+    "directors": [
+      "Adil El Arbi",
+      "Bilall Fallah"
+    ],
+    "officialUrl": "https://www.sonypictures.com/movies/badboysforlife",
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Graphic Violence"
+    ],
+    "runTime": "PT02H04M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p12028834_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:30",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:30",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T20:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T23:00",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=153305&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:00",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T15:50",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:00",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012684230000",
+    "rootId": "17008397",
+    "subType": "Feature Film",
+    "title": "Little Women",
+    "releaseYear": 2019,
+    "releaseDate": "2019-12-25",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Drama"
+    ],
+    "longDescription": "In the years after the Civil War, Jo March lives in New York and makes her living as a writer, while her sister Amy studies painting in Paris. Amy has a chance encounter with Theodore, a childhood crush who proposed to Jo but was ultimately rejected. Their oldest sibling, Meg, is married to a schoolteacher, while shy sister Beth develops a devastating illness that brings the family back together.",
+    "shortDescription": "Jo March and her two sisters return home when shy sibling Beth develops a devastating illness.",
+    "topCast": [
+      "Saoirse Ronan",
+      "Emma Watson",
+      "Florence Pugh"
+    ],
+    "directors": [
+      "Greta Gerwig"
+    ],
+    "officialUrl": "https://www.sonypictures.com/movies/littlewomen",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG"
+      }
+    ],
+    "advisories": [
+      "Adult Situations"
+    ],
+    "runTime": "PT02H15M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p17008397_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:10",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198747&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:20",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198747&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T18:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198747&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T21:45",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198747&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T14:30",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T17:15",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T20:00",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:15",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:20",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012662370000",
+    "rootId": "16981625",
+    "subType": "Feature Film",
+    "title": "Knives Out",
+    "releaseYear": 2019,
+    "releaseDate": "2019-09-07",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Mystery",
+      "Comedy drama"
+    ],
+    "longDescription": "When renowned crime novelist Harlan Thrombey dies just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc arrives at his estate to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Thrombey's untimely demise.",
+    "shortDescription": "A detective interviews the quirky relatives of a patriarch who died just after his 85th birthday.",
+    "topCast": [
+      "Daniel Craig",
+      "Chris Evans",
+      "Ana de Armas"
+    ],
+    "directors": [
+      "Rian Johnson"
+    ],
+    "officialUrl": "https://www.lionsgate.com/movies/knives-out",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT02H10M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p16981625_v_v5_ac.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:25",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198096&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198096&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T18:45",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198096&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T21:55",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198096&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T12:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T15:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T18:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012777200000",
+    "rootId": "17115190",
+    "subType": "Feature Film",
+    "title": "Just Mercy",
+    "releaseYear": 2019,
+    "releaseDate": "2019-09-06",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Drama"
+    ],
+    "longDescription": "After graduating from Harvard, Bryan Stevenson heads to Alabama to defend those wrongly condemned or those not afforded proper representation. One of his first cases is that of Walter McMillian, who is sentenced to die in 1987 for the murder of an 18-year-old girl, despite evidence proving his innocence. In the years that follow, Stevenson encounters racism and legal and political maneuverings as he tirelessly fights for McMillian's life.",
+    "shortDescription": "Lawyer Bryan Stevenson fights for the life of death row inmate Walter McMillian.",
+    "topCast": [
+      "Michael B. Jordan",
+      "Jamie Foxx",
+      "Brie Larson"
+    ],
+    "directors": [
+      "Destin Daniel Cretton"
+    ],
+    "officialUrl": "https://www.warnerbros.com/movies/just-mercy",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT02H16M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "caption": {
+        "content": "Just Mercy (2019)",
+        "lang": "en"
+      },
+      "uri": "assets/p17115190_p_v5_aa.jpg",
+      "category": "Poster Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=199241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:50",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=199241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:05",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=199241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:20",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=199241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:25",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:35",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:10",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV010023510000",
+    "rootId": "14097646",
+    "subType": "Feature Film",
+    "title": "Star Wars: The Rise of Skywalker",
+    "releaseYear": 2019,
+    "releaseDate": "2019-12-18",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Science fiction",
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "longDescription": "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo Ren.",
+    "shortDescription": "Rey and her allies prepare for a showdown against Kylo Ren and the First Order.",
+    "topCast": [
+      "Carrie Fisher",
+      "Mark Hamill",
+      "Adam Driver"
+    ],
+    "directors": [
+      "J.J. Abrams"
+    ],
+    "officialUrl": "https://www.starwars.com/films/star-wars-episode-ix-the-rise-of-skywalker",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "2.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT02H22M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "caption": {
+        "content": "Star Wars: The Rise of Skywalker -- The IMAX 2D Experience (2019)",
+        "lang": "en"
+      },
+      "uri": "assets/p14097646_p_v5_an.jpg",
+      "category": "Poster Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:40",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=173583&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:00",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=173583&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:20",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=173583&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:40",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=173583&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T12:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:00",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:15",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012952010000",
+    "rootId": "17290162",
+    "subType": "Feature Film",
+    "title": "Weathering With You",
+    "releaseYear": 2019,
+    "releaseDate": "2019-10-17",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Anime"
+    ],
+    "longDescription": "A boy runs away to Tokyo and befriends a girl who appears to be able to manipulate the weather.",
+    "shortDescription": "A boy runs away to Tokyo and befriends a girl who appears to be able to manipulate the weather.",
+    "topCast": [
+      "Kotaro Daigo"
+    ],
+    "directors": [
+      "Makoto Shinkai"
+    ],
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT01H51M",
+    "animation": "Anime",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p17290162_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:45",
+        "quals": "Advance Tickets Available",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:45",
+        "quals": "Advance Tickets Available",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T18:50",
+        "quals": "Advance Tickets Available|Sub-Titled",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200241&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T21:50",
+        "quals": "Advance Tickets Available|Sub-Titled",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200241&d=2020-01-21"
+      }
+    ]
+  },
+  {
+    "tmsId": "MV010390160000",
+    "rootId": "14568920",
+    "subType": "Feature Film",
+    "title": "Frozen II",
+    "releaseYear": 2019,
+    "releaseDate": "2019-11-20",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Musical comedy",
+      "Adventure",
+      "Animated",
+      "Children"
+    ],
+    "audience": "Children",
+    "longDescription": "Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.",
+    "shortDescription": "Elsa the Snow Queen embarks on a journey to the enchanted forests and dark seas beyond her kingdom.",
+    "topCast": [
+      "Kristen Bell",
+      "Idina Menzel",
+      "Josh Gad"
+    ],
+    "directors": [
+      "Chris Buck",
+      "Jennifer Lee"
+    ],
+    "officialUrl": "https://movies.disney.com/frozen-2",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG"
+      }
+    ],
+    "advisories": [
+      "Adult Situations"
+    ],
+    "runTime": "PT01H43M",
+    "animation": "Animated",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p14568920_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T12:55",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=177942&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T15:40",
+        "quals": "Advance Tickets Available|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=177942&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T18:30",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=177942&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T21:30",
+        "quals": "Advance Tickets Available|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=177942&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:55",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV013006580000",
+    "rootId": "17345031",
+    "subType": "Feature Film",
+    "title": "Uncut Gems",
+    "releaseYear": 2019,
+    "releaseDate": "2019-08-30",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Thriller",
+      "Dark comedy"
+    ],
+    "longDescription": "A charismatic jeweler makes a high-stakes bet that could lead to the windfall of a lifetime. In a precarious high-wire act, he must balance business, family and adversaries on all sides in pursuit of the ultimate win.",
+    "shortDescription": "A jeweler must balance business, family and adversaries on all sides after making a high-stakes bet.",
+    "topCast": [
+      "Adam Sandler",
+      "Lakeith Stanfield",
+      "Julia Fox"
+    ],
+    "directors": [
+      "Benny Safdie",
+      "Josh Safdie"
+    ],
+    "officialUrl": "https://a24films.com/films/uncut-gems",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT02H15M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p17345031_v_v5_ab.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:10",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=201533&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:25",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=201533&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:40",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=201533&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:55",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=201533&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T18:15",
+        "quals": "AMC Independent|Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012729530000",
+    "rootId": "17060373",
+    "subType": "Feature Film",
+    "title": "1917",
+    "releaseYear": 2019,
+    "releaseDate": "2019-01-23",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "War",
+      "Historical drama"
+    ],
+    "longDescription": "During World War I, two British soldiers -- Lance Cpl. Schofield and Lance Cpl. Blake -- receive seemingly impossible orders. In a race against time, they must cross over into enemy territory to deliver a message that could potentially save 1,600 of their fellow comrades -- including Blake's own brother.",
+    "shortDescription": "Two British soldiers cross over into enemy territory to save 1,600 comrades during World War I.",
+    "topCast": [
+      "George MacKay",
+      "Dean-Charles Chapman",
+      "Mark Strong"
+    ],
+    "directors": [
+      "Sam Mendes"
+    ],
+    "officialUrl": "https://www.universalpictures.com/movies/1917",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT01H59M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p17060373_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:15",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:45",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:15",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:50",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:15",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:45",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:10",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:45",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=198853&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T12:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T15:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T18:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV011111610000",
+    "rootId": "15446613",
+    "subType": "Feature Film",
+    "title": "Jumanji: The Next Level",
+    "releaseYear": 2019,
+    "releaseDate": "2019-12-04",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "longDescription": "When Spencer goes back into the fantastical world of Jumanji, pals Martha, Fridge and Bethany re-enter the game to bring him home. But the game is now broken -- and fighting back. Everything the friends know about Jumanji is about to change, as they soon discover there's more obstacles and more danger to overcome.",
+    "shortDescription": "Martha, Fridge and Bethany re-enter the fantastical world of Jumanji to bring Spencer home.",
+    "topCast": [
+      "Dwayne Johnson",
+      "Kevin Hart",
+      "Jack Black"
+    ],
+    "directors": [
+      "Jake Kasdan"
+    ],
+    "officialUrl": "http://www.jumanjimovie.com/",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "2.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT02H03M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p15446613_v_v5_af.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:25",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=185651&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:20",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=185651&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=185651&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=185651&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012205500000",
+    "rootId": "16379585",
+    "subType": "Feature Film",
+    "title": "Like a Boss",
+    "releaseYear": 2020,
+    "releaseDate": "2020-01-10",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Comedy"
+    ],
+    "longDescription": "Best friends Mia and Mel run their own cosmetics company -- a business they built from the ground up. But they're also in over their heads financially, and the prospect of a buyout offer from an industry titan proves too tempting to pass up. The beauty business is now about to get ugly as the proposal puts Mia and Mel's lifelong friendship to the ultimate test.",
+    "shortDescription": "Tensions rise when the owners of a cosmetics company receive a buyout offer from an industry titan.",
+    "topCast": [
+      "Tiffany Haddish",
+      "Rose Byrne",
+      "Salma Hayek"
+    ],
+    "directors": [
+      "Miguel Arteta"
+    ],
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT01H23M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "caption": {
+        "content": "Like a Boss (2020)",
+        "lang": "en"
+      },
+      "uri": "assets/p16379585_p_v5_ab.jpg",
+      "category": "Poster Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:30",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=193104&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:55",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=193104&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:55",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=193104&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:30",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=193104&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T14:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:00",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012572340000",
+    "rootId": "16919037",
+    "subType": "Feature Film",
+    "title": "Underwater",
+    "releaseYear": 2020,
+    "releaseDate": "2020-01-08",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "longDescription": "Disaster strikes more than six miles below the ocean surface when water crashes through the walls of a drilling station. Led by their captain, the survivors realize that their only hope is to walk across the sea floor to reach the main part of the facility. But the crew soon find themselves in a fight for their lives when they come under attack from mysterious and deadly creatures that no one has seen before.",
+    "shortDescription": "Members of a deep-sea drilling crew come under attack from mysterious and deadly creatures.",
+    "topCast": [
+      "Kristen Stewart",
+      "Vincent Cassel",
+      "Mamoudou Athie"
+    ],
+    "directors": [
+      "William Eubank"
+    ],
+    "officialUrl": "https://www.foxmovies.com/movies/underwater",
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT01H35M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p16919037_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=197630&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T17:00",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=197630&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:50",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=197630&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:25",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=197630&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T14:00",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T19:15",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012966600000",
+    "rootId": "17307870",
+    "subType": "Feature Film",
+    "title": "Bombshell",
+    "releaseYear": 2019,
+    "releaseDate": "2019-12-13",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Drama"
+    ],
+    "longDescription": "When Gretchen Carlson slaps Fox News founder Roger Ailes with a lawsuit alleging sexual harassment, not a soul could predict what would happen next. Her decision leads to Fox News correspondent Megyn Kelly coming forward with her own story, as well as multiple other women, inciting a movement that reverberates around the world.",
+    "shortDescription": "Female employees at Fox News take on a toxic male culture, leading to the downfall of Roger Ailes.",
+    "topCast": [
+      "Charlize Theron",
+      "Nicole Kidman",
+      "Margot Robbie"
+    ],
+    "directors": [
+      "Jay Roach"
+    ],
+    "officialUrl": "https://www.lionsgate.com/movies/bombshell",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "2.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT01H48M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p17307870_v_v5_ab.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:50",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200399&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:35",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200399&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:25",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200399&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:05",
+        "quals": "Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=200399&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T12:30",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012052110000",
+    "rootId": "16195223",
+    "subType": "Feature Film",
+    "title": "Dolittle",
+    "releaseYear": 2020,
+    "releaseDate": "2020-01-17",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Animated",
+      "Children"
+    ],
+    "audience": "Children",
+    "longDescription": "Dr. John Dolittle lives in solitude behind the high walls of his lush manor in 19th-century England. His only companionship comes from an array of exotic animals that he speaks to on a daily basis. But when young Queen Victoria becomes gravely ill, the eccentric doctor and his furry friends embark on an epic adventure to a mythical island to find the cure.",
+    "shortDescription": "Dr. John Dolittle and an array of exotic animals embark on an epic adventure to a mythical island.",
+    "topCast": [
+      "Robert Downey",
+      "Antonio Banderas",
+      "Michael Sheen"
+    ],
+    "directors": [
+      "Stephen Gaghan"
+    ],
+    "officialUrl": "https://www.dolittlethemovie.com/",
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations"
+    ],
+    "runTime": "PT01H40M",
+    "animation": "Live action/animated",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "caption": {
+        "content": "Dolittle (2020)",
+        "lang": "en"
+      },
+      "uri": "assets/p16195223_p_v5_aa.jpg",
+      "category": "Poster Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T13:55",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": true,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=191772&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T16:45",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=191772&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T19:30",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=191772&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "5631",
+          "name": "Regal Green Hills Stadium 16"
+        },
+        "dateTime": "2020-01-21T22:15",
+        "quals": "Advance Tickets Available|No Passes|Closed Captioned|Descriptive Video Services",
+        "barg": false,
+        "ticketURI": "http://www.fandango.com/tms.asp?t=AAIWP&m=191772&d=2020-01-21"
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T13:40",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T16:20",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T18:45",
+        "quals": "Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV013155180000",
+    "rootId": "15569518",
+    "subType": "Feature Film",
+    "title": "Invisible Life",
+    "releaseYear": 2019,
+    "releaseDate": "2019-05-20",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "longDescription": "Kept apart by a terrible lie, years pass as two sisters forge their respective paths through their city's teeming bustle, each believing the other to be half a world away.",
+    "shortDescription": "Two sisters live in their city's bustle, each believing the other to be half a world away.",
+    "topCast": [
+      "Carol Duarte",
+      "Julia Stockler",
+      "Greg\u00f3rio Duvivier"
+    ],
+    "directors": [
+      "Karim A\u00efnouz"
+    ],
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Situations",
+      "Nudity",
+      "Strong Sexual Content"
+    ],
+    "runTime": "PT02H19M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "caption": {
+        "content": "Invisible Life (2019)",
+        "lang": "en"
+      },
+      "uri": "assets/p15569518_p_v5_ac.jpg",
+      "category": "Poster Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T14:10",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T18:40",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012678360000",
+    "rootId": "16965677",
+    "subType": "Feature Film",
+    "title": "Parasite",
+    "releaseYear": 2019,
+    "releaseDate": "2019-05-21",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Dark comedy",
+      "Thriller"
+    ],
+    "longDescription": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "shortDescription": "Greed and class discrimination threaten the relationship between a poor family and a wealthy family.",
+    "topCast": [
+      "Song Kang-ho",
+      "Yeo-jeong Jo",
+      "So-dam Park"
+    ],
+    "directors": [
+      "Bong Joon-ho"
+    ],
+    "officialUrl": "https://www.parasite-movie.com/",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT02H12M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p16965677_v_v5_ad.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T17:00",
+        "barg": false
+      },
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T21:20",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV000092310000",
+    "rootId": "5305",
+    "subType": "Feature Film",
+    "title": "Leave Her to Heaven",
+    "releaseYear": 1945,
+    "releaseDate": "1945-12-20",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Crime drama"
+    ],
+    "longDescription": "While on a train, writer Richard Harland (Cornel Wilde) strikes up a relationship with the gorgeous Ellen Berent (Gene Tierney). Ellen quickly becomes obsessed with Richard and abandons her fianc\u00e9, Russell Quinton (Vincent Price), to be with him. The couple rushes into marriage, with both of them caught up in romance and Richard intrigued by Ellen's intensity. Only after settling into marriage, however, does Richard realize that she is psychotically jealous and highly unstable.",
+    "shortDescription": "A jealous woman (Gene Tierney) kills people to keep her writer husband (Cornel Wilde) to herself.",
+    "topCast": [
+      "Gene Tierney",
+      "Cornel Wilde",
+      "Jeanne Crain"
+    ],
+    "directors": [
+      "John M. Stahl"
+    ],
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3"
+    },
+    "runTime": "PT01H51M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p5305_v_v5_aa.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "5867",
+          "name": "Belcourt Theatre"
+        },
+        "dateTime": "2020-01-21T19:45",
+        "barg": false
+      }
+    ]
+  },
+  {
+    "tmsId": "MV012593430000",
+    "rootId": "16945954",
+    "subType": "Feature Film",
+    "title": "Jojo Rabbit",
+    "releaseYear": 2019,
+    "releaseDate": "2019-01-16",
+    "titleLang": "en",
+    "descriptionLang": "en",
+    "entityType": "Movie",
+    "genres": [
+      "Comedy drama"
+    ],
+    "longDescription": "Jojo is a lonely German boy who discovers that his single mother is hiding a Jewish girl in their attic. Aided only by his imaginary friend -- Adolf Hitler -- Jojo must confront his blind nationalism as World War II continues to rage on.",
+    "shortDescription": "A lonely German boy talks to his imaginary friend -- Adolf Hitler -- at the height of World War II.",
+    "topCast": [
+      "Roman Griffin Davis",
+      "Thomasin McKenzie",
+      "Scarlett Johansson"
+    ],
+    "directors": [
+      "Taika Waititi"
+    ],
+    "officialUrl": "http://www.foxsearchlight.com/jojorabbit/",
+    "qualityRating": {
+      "ratingsBody": "TMS",
+      "value": "3.5"
+    },
+    "ratings": [
+      {
+        "body": "Motion Picture Association of America",
+        "code": "PG-13"
+      }
+    ],
+    "advisories": [
+      "Adult Language",
+      "Adult Situations",
+      "Violence"
+    ],
+    "runTime": "PT01H48M",
+    "preferredImage": {
+      "width": "240",
+      "height": "360",
+      "uri": "assets/p16945954_v_v5_ab.jpg",
+      "category": "VOD Art",
+      "text": "yes",
+      "primary": "true"
+    },
+    "showtimes": [
+      {
+        "theatre": {
+          "id": "11583",
+          "name": "AMC Bellevue 12"
+        },
+        "dateTime": "2020-01-21T15:30",
+        "quals": "AMC Independent|Closed Captioned|Descriptive Video Services|Recliners|Reserved Seating",
+        "barg": false
+      }
+    ]
+  }
+]
