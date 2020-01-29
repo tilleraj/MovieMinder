@@ -8,6 +8,7 @@ namespace movieminder.api.DataModels
     public class Movie
     {
         public int Id { get; set; }
+        public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
         public bool LeftTheaters { get; set; }
         public DateTime RetireDate { get; set; }
