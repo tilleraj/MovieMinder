@@ -19,5 +19,16 @@ namespace movieminder.api.Repositories
                 return allMovies;
             }
         }
+
+        public Movie GetMovie(int id)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = "select * from movie where [id] = @id";
+                var parameters = new { id };
+                var movie = db.QueryFirstOrDefault<Movie>(sql, parameters);
+                return movie;
+            }
+        }
     }
 }

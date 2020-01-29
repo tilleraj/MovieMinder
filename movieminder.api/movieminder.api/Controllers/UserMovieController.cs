@@ -23,5 +23,12 @@ namespace movieminder.api.Controllers
             var userMovies = _repo.GetAllUserMovies();
             return userMovies;
         }
+
+        // GET api/usermovie/4
+        [HttpGet("{id}")]
+        public UserMovie GetUserMovie(int id)
+        {
+            return _repo.GetUserMovie(id);
+        }
     }
 }

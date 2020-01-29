@@ -6,18 +6,30 @@ using Dapper;
 
 namespace movieminder.api.Repositories
 {
-    public class UserRepository
+    public class UserMovieRepository
     {
         string _connectionString = "Server=localhost; Database=MovieMinder; Trusted_Connection=True;";
 
-        public IEnumerable<User> GetAllUsers()
+        public IEnumerable<UserMovie> GetAllUserMovies()
         {
             using (var db = new SqlConnection(_connectionString))
             {
-                var sql = "Select * from [User]";
-                var allUsers = db.Query<User>(sql);
-                return allUsers;
+                var sql = "Select * from [UserMovie]";
+                var allUserMovies = db.Query<UserMovie>(sql);
+                return allUserMovies;
             }
         }
+
+        public UserMovie GetUserMovie(int id)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = "select * from [UserMovie] where [id] = @id";
+                var parameters = new { id };
+                var userMovie = db.QueryFirstOrDefault<UserMovie>(sql, parameters);
+                return userMovie;
+            }
+        }
+
     }
 }

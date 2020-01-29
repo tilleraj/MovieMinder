@@ -15,6 +15,7 @@ namespace movieminder.api.Controllers
     {
 
         private readonly MovieRepository _repo = new MovieRepository();
+        
         // GET api/movie
         [HttpGet]
         public IEnumerable<Movie> GetMovies()
@@ -22,6 +23,13 @@ namespace movieminder.api.Controllers
             var repo = new MovieRepository();
             var movies = _repo.GetAllMovies();
             return movies;
+        }
+
+        // GET api/movie/4
+        [HttpGet("{id}")]
+        public Movie GetMovie(int id)
+        {
+            return _repo.GetMovie(id);
         }
     }
 }
