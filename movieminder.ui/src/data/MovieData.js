@@ -5,7 +5,7 @@ const baseUrl = 'https://localhost:44354';
 const getAllMovies = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/api/Movie`)
     .then((result) => {
-      resolve(result.data);
+      resolve(result);
     })
     .catch((error) => {
       reject(error);

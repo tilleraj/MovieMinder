@@ -5,7 +5,7 @@ const baseUrl = 'https://localhost:44354';
 const getAllUsers = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/api/User`)
     .then((result) => {
-      resolve(result.data);
+      resolve(result);
     })
     .catch((error) => {
       reject(error);

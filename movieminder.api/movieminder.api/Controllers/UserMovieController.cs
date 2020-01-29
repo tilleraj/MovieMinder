@@ -30,5 +30,14 @@ namespace movieminder.api.Controllers
         {
             return _repo.GetUserMovie(id);
         }
+
+        // GET api/usermovie/user/4
+        [HttpGet("user/{userId:int}")]
+        public IEnumerable<UserMovieWithMovieData> GetAllUserMoviesWithMovieDataByUser(int userId)
+        {
+            var repo = new UserMovieRepository();
+            var userMovies = _repo.GetAllUserMoviesWithMovieDataByUser(userId);
+            return userMovies;
+        }
     }
 }
