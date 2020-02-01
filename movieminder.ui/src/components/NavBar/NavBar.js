@@ -7,8 +7,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Input,
-  Form,
+  // Input,
+  // Form,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -63,13 +63,10 @@ class NavBar extends React.Component {
               <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/link1'>Link1</NavLink>
+              <NavLink tag={RRNavLink} to='/mylists'>My Lists</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to='/link2'>Link2</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={RRNavLink} to='/link3'>link3</NavLink>
+              <NavLink tag={RRNavLink} to='/showtimes'>Now Showing</NavLink>
             </NavItem>
             <NavItem>
               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown} inNavbar={true}>
