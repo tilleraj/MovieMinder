@@ -14,6 +14,8 @@ import firebaseConnection from '../requests/connection';
 import Auth from '../components/Auth/Auth';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
+import MyLists from '../components/MyLists/MyLists';
+import NowShowing from '../components/NowShowing/NowShowing';
 
 import './App.scss';
 
@@ -66,6 +68,8 @@ class App extends React.Component {
               <Switch>
                 <PublicRoute path="/auth" component={Auth} authed={authed} />
                 <PrivateRoute path="/home" component={Home} authed={authed} />
+                <PrivateRoute path="/mylists" component={MyLists} authed={authed} />
+                <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>
             </div>
