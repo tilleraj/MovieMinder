@@ -1,4 +1,5 @@
-﻿using movieminder.api.Models;
+﻿using Microsoft.Extensions.Configuration;
+using movieminder.api.Models;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -9,18 +10,20 @@ namespace movieminder.api.Repositories
 {
     public class MovieScheduleRepository
     {
+        private readonly IConfiguration _config;
         private RestClient _client;
 
-        public MovieScheduleRepository()
+        public MovieScheduleRepository(IConfiguration config)
         {
             _client = new RestClient("http://data.tmsapi.com/v1.1/movies/");
-
+            _config = config;
         }
 
         public List<MovieSchedule> GetAllMovieSchedules()
         {
-            var request = new RestRequest("showings?startDate=2020-02-01&zip=37205&api_key=3cbn8c8akp4j34afwe8ztvnx");
+            var key = _config.GetSection("gracenoteKey").Value;
 
+            var request = new RestRequest($"showings?startDate=2020-02-01&zip=37205&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
 
             return movieSchedules.Data;

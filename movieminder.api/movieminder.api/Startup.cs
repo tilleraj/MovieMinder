@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using movieminder.api.Repositories;
 
 namespace movieminder.api
 {
@@ -51,6 +52,7 @@ namespace movieminder.api
                         ValidateLifetime = true
                     };
                 });
+            services.AddTransient<MovieScheduleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
