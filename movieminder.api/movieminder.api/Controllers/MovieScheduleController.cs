@@ -25,5 +25,12 @@ namespace movieminder.api.Controllers
             return movieSchedules;
         }
 
+        // GET api/movieschedule/MV007920380000
+        [HttpGet("{tmsId}")]
+        public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string tmsId)
+        {
+            return _repo.GetMovieScheduleByTmsId(tmsId);
+        }
+
     }
 }

@@ -28,5 +28,14 @@ namespace movieminder.api.Repositories
 
             return movieSchedules.Data;
         }
+
+        public List<MovieSchedule> GetMovieScheduleByTmsId(string tmsId)
+        {
+            var key = _config.GetSection("gracenoteKey").Value;
+            var request = new RestRequest($"/{tmsId}/showings?startDate=2020-02-04&zip=37205&api_key={key}");
+            var movieSchedules = _client.Get<List<MovieSchedule>>(request);
+
+            return movieSchedules.Data;
+        }
     }
 }
