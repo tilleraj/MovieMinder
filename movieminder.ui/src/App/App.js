@@ -24,23 +24,37 @@ firebaseConnection();
 
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
-    ? (<Component {...props} />)
+    ? (<Component {...props} {...rest} />)
     : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
-  return <Route {...rest} render={props => routeChecker(props)} />;
+  return <Route render={props => routeChecker(props)} />;
 };
 
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === true
-    ? (<Component {...props} />)
+    ? (<Component {...props} {...rest} />)
     : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
-  return <Route {...rest} render={props => routeChecker(props)} />;
+  return <Route  render={props => routeChecker(props)} />;
 };
+
+// const PrivateRoute = ({ component: Component, authed, ...rest }) => {
+//   // props contains Location, Match, and History
+//   const routeChecker = props => (authed === true 
+//     ? <Component {...props} {...rest}/> 
+//     : <Redirect to={{ pathname: '/auth', state: { from: props.location } }} />);
+//   return <Route render={props => routeChecker(props)} />;
+// };
+
+const defaultProfile = {
+  username: 'test',
+  email: '',
+  zip: ''
+}
 
 class App extends React.Component {
   state = {
     authed: false,
     isRegFormFirstLoad: false,
-    profile: null,
+    profile: null
   };
 
   logout = () => this.setState({ authed: false, profile: null, isRegFormFirstLoad: false });
@@ -85,7 +99,7 @@ class App extends React.Component {
                   setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
                   setProfile={this.setProfile} />
                 <PrivateRoute path="/mylists" component={MyLists} authed={authed} />
-                <PrivateRoute path="/register" component={Register} authed={authed} setProfile={"hehehehe"} />
+                <PrivateRoute path="/register" component={Register} authed={authed} setProfile={this.setProfile} />
                 <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>
