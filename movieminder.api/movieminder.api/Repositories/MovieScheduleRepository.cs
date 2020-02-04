@@ -23,8 +23,18 @@ namespace movieminder.api.Repositories
         {
             var key = _config.GetSection("gracenoteKey").Value;
 
-            var request = new RestRequest($"showings?startDate=2020-02-01&zip=37205&api_key={key}");
+            var request = new RestRequest($"showings?startDate=2020-02-04&zip=37205&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
+
+            return movieSchedules.Data;
+        }
+
+        public List<MovieScheduleConcise> GetAllConciseMovieSchedules()
+        {
+            var key = _config.GetSection("gracenoteKey").Value;
+
+            var request = new RestRequest($"showings?startDate=2020-02-04&zip=37205&api_key={key}");
+            var movieSchedules = _client.Get<List<MovieScheduleConcise>>(request);
 
             return movieSchedules.Data;
         }

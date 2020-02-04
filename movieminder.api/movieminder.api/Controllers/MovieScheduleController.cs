@@ -5,7 +5,7 @@ using movieminder.api.Repositories;
 
 namespace movieminder.api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/schedule")]
     [ApiController]
     public class MovieScheduleController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace movieminder.api.Controllers
             _repo = repo;
         }
 
-        // GET api/movieschedule
+        // GET api/schedule
         [HttpGet]
         public IEnumerable<MovieSchedule> GetMovieSchedules()
         {
@@ -25,7 +25,15 @@ namespace movieminder.api.Controllers
             return movieSchedules;
         }
 
-        // GET api/movieschedule/MV007920380000
+        // GET api/schedule/concise
+        [HttpGet("concise")]
+        public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules()
+        {
+            var conciseMovieSchedules = _repo.GetAllConciseMovieSchedules();
+            return conciseMovieSchedules;
+        }
+
+        // GET api/schedule/MV007920380000
         [HttpGet("{tmsId}")]
         public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string tmsId)
         {
