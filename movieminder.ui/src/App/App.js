@@ -16,6 +16,7 @@ import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
 import MyLists from '../components/MyLists/MyLists';
 import NowShowing from '../components/NowShowing/NowShowing';
+import Register from '../components/Register/Register';
 
 import './App.scss';
 
@@ -38,9 +39,17 @@ const PrivateRoute = ({ component: Component, authed, ...rest }) => {
 class App extends React.Component {
   state = {
     authed: false,
+    isRegFormFirstLoad: false,
+    profile: null,
   };
 
-  logout = () => this.setState({ authed: false });
+  logout = () => this.setState({ authed: false, profile: null, isRegFormFirstLoad: false });
+
+  setProfile = profile => this.setState({ profile, authed: true });
+
+  setIsRegFormFirstLoadToTrue = () => {
+    this.setState({ isRegFormFirstLoad: true });
+  }
 
   componentDidMount() {
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
@@ -57,18 +66,26 @@ class App extends React.Component {
   }
 
   render() {
-    const { authed } = this.state;
+    const { authed, isRegFormFirstLoad, profile } = this.state;
 
     return (
       <div className="App">
         <Router>
-          <NavBar authed={authed} logout={this.logout} />
+          <NavBar authed={authed} profile={profile} logout={this.logout} />
           <div className="container">
             <div className="row">
               <Switch>
-                <PublicRoute path="/auth" component={Auth} authed={authed} />
-                <PrivateRoute path="/home" component={Home} authed={authed} />
+                {/* <PublicRoute path="/auth" component={Auth} authed={authed} /> */}
+                <PublicRoute path="/auth" component={Home} authed={authed} />
+                <PrivateRoute path="/home"
+                  component={Home}
+                  authed={authed}
+                  profile={profile}
+                  isRegFormFirstLoad={isRegFormFirstLoad}
+                  setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
+                  setProfile={this.setProfile} />
                 <PrivateRoute path="/mylists" component={MyLists} authed={authed} />
+                <PrivateRoute path="/register" component={Register} authed={authed} setProfile={"hehehehe"} />
                 <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>

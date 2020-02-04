@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using movieminder.api.DataModels;
 using Dapper;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Repositories
 {
@@ -28,6 +29,32 @@ namespace movieminder.api.Repositories
                 var parameters = new { id };
                 var user = db.QueryFirstOrDefault<User>(sql, parameters);
                 return user;
+            }
+        }
+
+        public User GetUserByUid(string firebaseUid)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"select * from [User]
+                            where FirebaseUid = @firebaseUid";
+                var user = db.QueryFirstOrDefault<User>(sql, new { firebaseUid });
+                return user;
+            }
+        }
+
+        public int Add(UserAdd newUser)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT INTO [User]([FirebaseUid], [Username], [Email], [Zip])
+                            VALUES (
+                              @FirebaseUid,
+                              @Username,
+                              @Email,
+                              @Zip
+                            )";
+                return db.Execute(sql, newUser);
             }
         }
     }
