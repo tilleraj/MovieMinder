@@ -18,7 +18,7 @@ class NowShowing extends React.Component {
     movieScheduleData.getMovieScheduleByTmsId("MV007920380000")
       .then((resp) => {
         let movieSchedules = resp.data;
-        console.error('MovieScheduleData:', movieSchedules);
+        // console.error('MovieScheduleData:', movieSchedules);
         let freshMovieSchedules = [...movieSchedules];
         this.setState({ movieSchedules: freshMovieSchedules })
       })
