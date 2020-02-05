@@ -43,18 +43,27 @@ namespace movieminder.api.Repositories
             }
         }
 
-        public int Add(UserAdd newUser)
+        public User Add(UserAdd newUser)
         {
             using (var db = new SqlConnection(_connectionString))
             {
-                var sql = @"INSERT INTO [User]([FirebaseUid], [Username], [Email], [Zip])
-                            VALUES (
-                              @FirebaseUid,
-                              @Username,
-                              @Email,
-                              @Zip
-                            )";
-                return db.Execute(sql, newUser);
+                //var sql = @"INSERT INTO [User]([FirebaseUid], [Username], [Email], [Zip])
+                //            VALUES (
+                //              @FirebaseUid,
+                //              @Username,
+                //              @Email,
+                //              @Zip
+                //            )";
+                var sql = @"INSERT [User]
+                            OUTPUT
+                            inserted.*
+                            VALUES
+                            (
+                            @FirebaseUid,
+                            @Username,
+                            @Email,
+                            @Zip)";
+                return db.QueryFirst<User>(sql, newUser);
             }
         }
     }

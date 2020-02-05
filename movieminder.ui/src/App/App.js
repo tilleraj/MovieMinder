@@ -29,23 +29,28 @@ const PublicRoute = ({ component: Component, authed, ...rest }) => {
   return <Route render={props => routeChecker(props)} />;
 };
 
-const PrivateRoute = ({ component: Component, authed, ...rest }) => {
-  const routeChecker = props => (authed === true
-    ? (<Component {...props} {...rest} />)
-    : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
-  return <Route  render={props => routeChecker(props)} />;
-};
-
 // const PrivateRoute = ({ component: Component, authed, ...rest }) => {
-//   // props contains Location, Match, and History
-//   const routeChecker = props => (authed === true 
-//     ? <Component {...props} {...rest}/> 
-//     : <Redirect to={{ pathname: '/auth', state: { from: props.location } }} />);
+//   const routeChecker = props => (authed === true
+//     ? (<Component {...props} {...rest} />)
+//     : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
 //   return <Route render={props => routeChecker(props)} />;
 // };
 
+const PrivateRoute = ({ component: Component, authed, ...rest }) => {
+  const routeChecker = (props) => {
+    if (authed === true && props.profile !== null) {
+      return (<Component {...props} {...rest} />)
+    } else if (authed === true) {
+      return (<Redirect to={{ pathname: '/register', state: { from: props.location } }} />)
+    } else {
+      return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
+    }
+  }
+  return <Route render={props => routeChecker(props)} />;
+};
+
 const defaultProfile = {
-  username: 'test',
+  username: '',
   email: '',
   zip: ''
 }
@@ -90,7 +95,7 @@ class App extends React.Component {
             <div className="row">
               <Switch>
                 {/* <PublicRoute path="/auth" component={Auth} authed={authed} /> */}
-                <PublicRoute path="/auth" component={Home} authed={authed} />
+                <PublicRoute path="/auth" component={Auth} authed={authed} setProfile={this.setProfile} />
                 <PrivateRoute path="/home"
                   component={Home}
                   authed={authed}
@@ -98,7 +103,7 @@ class App extends React.Component {
                   isRegFormFirstLoad={isRegFormFirstLoad}
                   setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
                   setProfile={this.setProfile} />
-                <PrivateRoute path="/mylists" component={MyLists} authed={authed} />
+                <PrivateRoute path="/mylists" component={MyLists} authed={authed} profile={profile} />
                 <PrivateRoute path="/register" component={Register} authed={authed} setProfile={this.setProfile} />
                 <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} />
                 <Redirect from="*" to="/home" />

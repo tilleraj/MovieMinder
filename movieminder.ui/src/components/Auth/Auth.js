@@ -8,6 +8,9 @@ import userMovieData from '../../data/UserMovieData';
 import './Auth.scss';
 
 class Auth extends React.Component {
+  state = {
+    response: null,
+  }
 
   componentDidMount() {
     // this.apiTesting();
@@ -57,10 +60,19 @@ class Auth extends React.Component {
     //   .catch((error) => console.error('AllUserMoviesWithMovieData', error));
   }
 
+
   loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+    firebase.auth().signInWithPopup(provider)
+      .then((response) => {
+        userData.getUserByFirebaseId(response.user.uid)
+          .then((userProfile) => {
+            this.props.setProfile(userProfile.data);
+            console.log(userProfile.data);
+          });
+      })
+      .catch((error) => console.error('could not login', error));
   };
 
   render() {
