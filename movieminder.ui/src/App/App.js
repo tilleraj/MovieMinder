@@ -22,7 +22,7 @@ import './App.scss';
 
 firebaseConnection();
 
-const PublicRoute = ({ component: Component, authed, ...rest }) => {
+const PublicRoute = ({ component: Component, authed, profile, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component {...props} {...rest} />)
     : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
@@ -36,15 +36,15 @@ const PublicRoute = ({ component: Component, authed, ...rest }) => {
 //   return <Route render={props => routeChecker(props)} />;
 // };
 
-const PrivateRoute = ({ component: Component, authed, ...rest }) => {
+const PrivateRoute = ({ component: Component, authed, profile, ...rest }) => {
   const routeChecker = (props) => {
-    if (authed === true && props.profile !== null) {
-      return (<Component {...props} {...rest} />)
-    } else if (authed === true) {
+    if (authed === true && profile === "" || profile === null) {
       return (<Redirect to={{ pathname: '/register', state: { from: props.location } }} />)
-    } else {
-      return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
     }
+    if (authed === true && profile !== null) {
+      return (<Component {...props} {...rest} />)
+    }
+    return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
   }
   return <Route render={props => routeChecker(props)} />;
 };
@@ -95,7 +95,7 @@ class App extends React.Component {
             <div className="row">
               <Switch>
                 {/* <PublicRoute path="/auth" component={Auth} authed={authed} /> */}
-                <PublicRoute path="/auth" component={Auth} authed={authed} setProfile={this.setProfile} />
+                <PublicRoute path="/auth" component={Auth} authed={authed} profile={profile} setProfile={this.setProfile} />
                 <PrivateRoute path="/home"
                   component={Home}
                   authed={authed}
@@ -105,7 +105,7 @@ class App extends React.Component {
                   setProfile={this.setProfile} />
                 <PrivateRoute path="/mylists" component={MyLists} authed={authed} profile={profile} />
                 <PrivateRoute path="/register" component={Register} authed={authed} setProfile={this.setProfile} />
-                <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} />
+                <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} profile={profile} />
                 <Redirect from="*" to="/home" />
               </Switch>
             </div>
