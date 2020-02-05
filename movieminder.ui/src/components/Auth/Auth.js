@@ -66,10 +66,10 @@ class Auth extends React.Component {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
       .then((response) => {
-        userData.getUserByFirebaseId(response.user.uid)
+        userData.getUserByEmail(response.user.email)
           .then((userProfile) => {
             this.props.setProfile(userProfile.data);
-            console.log(userProfile.data);
+            console.log(userProfile);
           });
       })
       .catch((error) => console.error('could not login', error));

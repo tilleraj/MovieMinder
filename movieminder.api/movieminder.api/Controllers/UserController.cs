@@ -27,10 +27,17 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/user/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public User GetUser(int id)
         {
             return _repo.GetUser(id);
+        }
+
+        // GET api/user/user@domain.com
+        [HttpGet("{email}")]
+        public User GetUserByEmail(string email)
+        {
+            return _repo.GetUserByEmail(email);
         }
 
         // GET api/user/uid/abc123def456ghi789jkl012mno3
@@ -55,6 +62,13 @@ namespace movieminder.api.Controllers
                 return NotFound("could not create user");
             }
             return Created($"movieminder/user/{userCreated}", userCreated);
+        }
+
+        // DELETE api/user/3
+        [HttpDelete("{id}")]
+        public bool DeleteUser(int id)
+        {
+            return _repo.DeleteUser(id);
         }
     }
 }

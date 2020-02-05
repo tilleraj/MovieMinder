@@ -12,6 +12,7 @@ const getAllUsers = () => new Promise((resolve, reject) => {
     });
 });
 
+const getUserByEmail = (email) => axios.get(`${baseUrl}/${email}`);
 const getUserById = (userId) => axios.get(`${baseUrl}/${userId}`);
 const getUserByFirebaseId = (firbaseUid) => axios.get(`${baseUrl}/uid/${firbaseUid}`);
 
@@ -20,6 +21,7 @@ const addUser = (user) => axios.post(baseUrl, user);
 export default {
   addUser,
   getAllUsers,
+  getUserByEmail,
   getUserById,
   getUserByFirebaseId
 }

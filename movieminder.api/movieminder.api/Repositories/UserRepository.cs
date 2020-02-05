@@ -43,6 +43,18 @@ namespace movieminder.api.Repositories
             }
         }
 
+        public User GetUserByEmail(string email)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"select * from [User]
+                            where Email = @email";
+                var parameters = new { email };
+                var user = db.QueryFirstOrDefault<User>(sql, parameters);
+                return user;
+            }
+        }
+
         public User Add(UserAdd newUser)
         {
             using (var db = new SqlConnection(_connectionString))
@@ -64,6 +76,17 @@ namespace movieminder.api.Repositories
                             @Email,
                             @Zip)";
                 return db.QueryFirst<User>(sql, newUser);
+            }
+        }
+
+        public bool DeleteUser(int id)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var sql = @"DELETE FROM [User]
+                            WHERE [Id] = @id";
+                var parameters = new { id };
+                return connection.Execute(sql, parameters) == 1;
             }
         }
     }
