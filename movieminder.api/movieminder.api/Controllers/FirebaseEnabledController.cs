@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace RGBay.api.Controllers
+namespace movieminder.api.Controllers
 {
     public abstract class FirebaseEnabledController : ControllerBase
     {

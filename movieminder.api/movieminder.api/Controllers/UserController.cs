@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using movieminder.api.Commands;
 using movieminder.api.DataModels;
 using movieminder.api.Repositories;
-using RGBay.api.Controllers;
 
 namespace movieminder.api.Controllers
 {
