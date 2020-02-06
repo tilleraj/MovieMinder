@@ -11,6 +11,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConnection from '../requests/connection';
 
+import userData from '../data/UserData';
+
 import Auth from '../components/Auth/Auth';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
@@ -29,25 +31,25 @@ const PublicRoute = ({ component: Component, authed, profile, ...rest }) => {
   return <Route render={props => routeChecker(props)} />;
 };
 
-// const PrivateRoute = ({ component: Component, authed, ...rest }) => {
-//   const routeChecker = props => (authed === true
-//     ? (<Component {...props} {...rest} />)
-//     : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
-//   return <Route render={props => routeChecker(props)} />;
-// };
-
-const PrivateRoute = ({ component: Component, authed, profile, ...rest }) => {
-  const routeChecker = (props) => {
-    if (authed === true && profile === "" || profile === null) {
-      return (<Redirect to={{ pathname: '/register', state: { from: props.location } }} />)
-    }
-    if (authed === true && profile !== null) {
-      return (<Component {...props} {...rest} />)
-    }
-    return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
-  }
+const PrivateRoute = ({ component: Component, authed, ...rest }) => {
+  const routeChecker = props => (authed === true
+    ? (<Component {...props} {...rest} />)
+    : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
   return <Route render={props => routeChecker(props)} />;
 };
+
+// const PrivateRoute = ({ component: Component, authed, profile, ...rest }) => {
+//   const routeChecker = (props) => {
+//     if (authed === true && profile === "" || profile === null) {
+//       return (<Redirect to={{ pathname: '/register', state: { from: props.location } }} />)
+//     }
+//     if (authed === true && profile !== null) {
+//       return (<Component {...props} {...rest} />)
+//     }
+//     return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
+//   }
+//   return <Route render={props => routeChecker(props)} />;
+// };
 
 const defaultProfile = {
   username: '',
@@ -74,6 +76,7 @@ class App extends React.Component {
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ authed: true });
+        this.checkForProfile(user);
       } else {
         this.setState({ authed: false });
       }
@@ -82,6 +85,15 @@ class App extends React.Component {
 
   componentWillUnmount() {
     this.removeListener();
+  }
+
+  checkForProfile(user) {
+    userData.getUserByEmail(user.email)
+      .then((userProfile) => {
+        this.setProfile(userProfile.data);
+        console.log(userProfile);
+      })
+      .catch((error) => console.error('could not get profile', error));
   }
 
   render() {
@@ -104,7 +116,7 @@ class App extends React.Component {
                   setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
                   setProfile={this.setProfile} />
                 <PrivateRoute path="/mylists" component={MyLists} authed={authed} profile={profile} />
-                <PrivateRoute path="/register" component={Register} authed={authed} setProfile={this.setProfile} />
+                <PrivateRoute path="/register" component={Register} authed={authed} profile={profile} setProfile={this.setProfile} />
                 <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} profile={profile} />
                 <Redirect from="*" to="/home" />
               </Switch>

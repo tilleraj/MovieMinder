@@ -10,10 +10,18 @@ class Home extends React.Component {
 
 
   render() {
-    const register = () => {
-      if (!this.props.profile) {
+    const { profile } = this.props;
+    const checkRegistration = () => {
+      if (profile === null || profile === "") {
         return (
-          < Register {...this.props}/>)
+          < Register {...this.props} />)
+      } else {
+        return (
+          <div>
+            <button type="button" className="btn btn-primary">This is a Homepage</button>
+            <Button>Welcome {this.props.profile.userName}</Button>
+          </div>
+        );
       }
     }
     return (
@@ -21,9 +29,7 @@ class Home extends React.Component {
         <div className="col">
           <div className="card">
             <div className="card-body">
-              <button type="button" className="btn btn-primary">Bootstrap Button</button>
-              <Button>Reactstrap Button</Button>
-              {register()}
+              {checkRegistration()}
             </div>
           </div>
         </div>
