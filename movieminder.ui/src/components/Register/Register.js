@@ -24,6 +24,7 @@ class Register extends React.Component {
   }
 
   submitRegisterForm = (event) => {
+    console.error(this.state.profile);
     event.preventDefault();
     const newProfile = this.state.profile;
     newProfile.email = firebase.auth().currentUser.email
