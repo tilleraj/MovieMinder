@@ -89,13 +89,6 @@ class MyLists extends React.Component {
           <div className="col-12">
             <div className="card">
               <div className="card-body">
-                My Lists Page
-            </div>
-            </div>
-          </div>
-          <div className="col-12">
-            <div className="card">
-              <div className="card-body">
                 Watch List
             </div>
             </div>

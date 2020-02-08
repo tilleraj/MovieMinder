@@ -16,11 +16,12 @@ const getUserMovieById = (userMovieId) => axios.get(`${baseUrl}/api/userMovie/${
 const getAllUserMoviesWithMovieDataByUser = (userId) => axios.get(`${baseUrl}/api/userMovie/user/${userId}`);
 
 const moveLists = (userMovieId, destinationList) => axios.put(`${baseUrl}/api/userMovie/move/${userMovieId}/${destinationList}`);
-
+const deleteUserMovie = userMovieId => axios.delete(`${baseUrl}/api/userMovie/${userMovieId}`);
 
 export default {
   getAllUserMovies,
   getUserMovieById,
   getAllUserMoviesWithMovieDataByUser,
-  moveLists
+  moveLists,
+  deleteUserMovie
 }

@@ -62,5 +62,18 @@ namespace movieminder.api.Repositories
             }
         }
 
+        public bool DeleteUserMovie(int id)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"DELETE 
+                            FROM UserMovie 
+                            WHERE [Id] = @Id";
+                var parameters = new { id };
+
+                return db.Execute(sql, parameters) == 1;
+            }
+        }
+
     }
 }

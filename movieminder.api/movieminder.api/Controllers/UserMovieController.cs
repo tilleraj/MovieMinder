@@ -65,5 +65,12 @@ namespace movieminder.api.Controllers
             }
             return _repo.UpdateUserMovie(movieToMove);
         }
+
+        // DELETE api/usermovie/7
+        [HttpDelete("{id}")]
+        public bool DeleteUserMovie(int id)
+        {
+            return _repo.DeleteUserMovie(id);
+        }
     }
 }
