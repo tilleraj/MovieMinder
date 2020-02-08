@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using movieminder.api.Commands;
@@ -11,7 +12,7 @@ using movieminder.api.Repositories;
 namespace movieminder.api.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Authorize]
     public class UserController : FirebaseEnabledController
     {
 
@@ -51,7 +52,7 @@ namespace movieminder.api.Controllers
         [HttpPost]
         public IActionResult CreateUser(UserAdd newUserCommand)
         {
-            newUserCommand.FirebaseUid = FirebaseUserId;
+            newUserCommand.FirebaseUid = FirebaseUserId();
 
             var repo = new UserRepository();
             var userCreated = repo.Add(newUserCommand);

@@ -9,7 +9,9 @@ axios.interceptors.request.use(function (request) {
   const token = sessionStorage.getItem('token');
 
   if (token != null) {
-      request.headers.Authorization = `Bearer ${token}`;
+    request.headers.Authorization = `Bearer ${token}`;
+  } else {
+    console.error('token', token);
   }
 
   return request;
@@ -22,16 +24,16 @@ const registerUser = (user) => {
   //sub out whatever auth method firebase provides that you want to use.
   const provider = new firebase.auth.GoogleAuthProvider();
   return firebase.auth().signInWithPopup(provider).then(cred => {
-    
+
     //get email from firebase
-    let userInfo = {email: cred.user.email};
+    let userInfo = { email: cred.user.email };
 
     //get token from firebase
     cred.user.getIdToken()
       //save the token to the session storage
-      .then(token => sessionStorage.setItem('token',token))
+      .then(token => sessionStorage.setItem('token', token))
       //save the user to the the api
-      .then(() => axios.post(`${baseUrl}/users`,userInfo));
+      .then(() => axios.post(`${baseUrl}/users`, userInfo));
   });
 };
 
@@ -41,8 +43,8 @@ const loginUser = () => {
   return firebase.auth().signInWithPopup(provider).then(cred => {
     //get token from firebase
     cred.user.getIdToken()
-        //save the token to the session storage
-      .then(token => sessionStorage.setItem('token',token));
+      //save the token to the session storage
+      .then(token => sessionStorage.setItem('token', token));
   });
 };
 
@@ -54,4 +56,4 @@ const getUid = () => {
   return firebase.auth().currentUser.uid;
 };
 
-export default {getUid, loginUser, logoutUser, registerUser};
+export default { getUid, loginUser, logoutUser, registerUser };
