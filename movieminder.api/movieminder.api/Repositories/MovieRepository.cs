@@ -40,5 +40,34 @@ namespace movieminder.api.Repositories
                 return movie;
             }
         }
+
+        public bool AddMovie(Movie movie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT INTO [dbo].[Movie]
+                            ([Title]
+                            ,[ReleaseDate]
+                            ,[PosterURL])
+                            VALUES
+                            (@title
+                            ,@releaseDate
+                            ,@posterURL)";
+                return db.Execute(sql, movie) == 1;
+            }
+        }
+
+        public bool UpdateMovie(Movie updateMovie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"UPDATE [dbo].[Movie]
+                           SET [Title] = @Title
+                              ,[ReleaseDate] = @ReleaseDate
+                              ,[PosterURL] = @PosterURL
+                         WHERE [Id] = @Id";
+                return db.Execute(sql, updateMovie) == 1;
+            }
+        }
     }
 }

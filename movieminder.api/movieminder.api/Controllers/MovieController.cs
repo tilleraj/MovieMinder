@@ -31,5 +31,20 @@ namespace movieminder.api.Controllers
         {
             return _repo.GetMovie(id);
         }
+
+        // POST api/movie/
+        [HttpPost]
+        public bool AddMovie(Movie movieToAdd)
+        {
+            return _repo.AddMovie(movieToAdd);
+        }
+
+        //PUT api/movie/4
+        [HttpPut("{movieId}")]
+        public bool UpdateMovie(Movie movieToUpdate, int movieId)
+        {
+            movieToUpdate.Id = movieId;
+            return _repo.UpdateMovie(movieToUpdate);
+        }
     }
 }
