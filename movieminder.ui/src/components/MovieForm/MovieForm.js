@@ -10,15 +10,6 @@ import {
 } from 'reactstrap';
 import './MovieForm.scss';
 
-const defaultMovie = {
-  id: '',
-  title: '',
-  releaseDate: '',
-  leftTheaters: '',
-  retireDate: '',
-  posterURL: '',
-};
-
 class MovieForm extends React.Component {
 
   render() {

@@ -103,7 +103,15 @@ class MyLists extends React.Component {
 
   movieFormChange = (e) => {
     const newFormMovie = {...this.state.formMovie};
-    newFormMovie.name = e.target.value;
+    if(e.target.id === "releaseDate"){
+      newFormMovie.releaseDate = e.target.value;
+    }
+    if(e.target.id === "posterURL"){
+      newFormMovie.posterURL = e.target.value;
+    }
+    if(e.target.id === "title"){
+      newFormMovie.title = e.target.value;
+    }
     this.setState({ formMovie: newFormMovie });
   }
 
