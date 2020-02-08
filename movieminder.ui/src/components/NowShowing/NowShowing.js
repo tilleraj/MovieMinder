@@ -59,15 +59,10 @@ class NowShowing extends React.Component {
     ));
     return (
       <div className="NowShowing">
-        <div className="col">
-          <div className="card">
-            <div className="card-body">
-              Now Showing Page
-              {moviesWithTimes}
-            </div>
-          </div>
+        <div className="row">
+          {moviesWithTimes}
         </div>
-      </div>
+      </div >
     );
   }
 }
