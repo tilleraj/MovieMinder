@@ -2,8 +2,9 @@
 using RestSharp;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using Dapper;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Repositories
 {
@@ -41,7 +42,7 @@ namespace movieminder.api.Repositories
             }
         }
 
-        public bool AddMovie(Movie movie)
+        public bool AddMovie(AddMovieCommand movie)
         {
             using (var db = new SqlConnection(_connectionString))
             {

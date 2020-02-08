@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using movieminder.api.Repositories;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Controllers
 {
@@ -34,7 +35,7 @@ namespace movieminder.api.Controllers
 
         // POST api/movie/
         [HttpPost]
-        public bool AddMovie(Movie movieToAdd)
+        public bool AddMovie(AddMovieCommand movieToAdd)
         {
             return _repo.AddMovie(movieToAdd);
         }

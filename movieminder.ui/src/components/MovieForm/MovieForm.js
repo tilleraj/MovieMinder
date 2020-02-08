@@ -27,7 +27,7 @@ class MovieForm extends React.Component {
         <Row form>
           <Col>
             <FormGroup>
-              <Label for="name">Title</Label>
+              <Label for="title">Title</Label>
               <Input
                 id="title"
                 placeholder="ex: The Hunger Games"
@@ -38,7 +38,7 @@ class MovieForm extends React.Component {
           </Col>
           <Col>
             <FormGroup>
-              <Label for="name">Release Date</Label>
+              <Label for="releaseDate">Release Date</Label>
               <Input
                 id="releaseDate"
                 placeholder="ex: 2012-03-23"

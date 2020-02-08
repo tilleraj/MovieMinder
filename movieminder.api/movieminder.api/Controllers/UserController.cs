@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using movieminder.api.Repositories;
 
 namespace movieminder.api.Controllers
