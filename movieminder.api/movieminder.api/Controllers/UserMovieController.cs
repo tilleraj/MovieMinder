@@ -58,9 +58,9 @@ namespace movieminder.api.Controllers
                     movieToMove.ShameList = true;
                     break;
                 default:
-                    movieToMove.WatchList = false;
+                    movieToMove.WatchList = true;
                     movieToMove.SeenList = false;
-                    movieToMove.ShameList = true;
+                    movieToMove.ShameList = false;
                     break;
             }
             return _repo.UpdateUserMovie(movieToMove);

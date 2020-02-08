@@ -1,12 +1,17 @@
 import React from 'react';
 import {
-  Button,
-  ButtonGroup
+  Button
 } from 'reactstrap';
 
 import './ListMovie.scss';
 
 class ListMovie extends React.Component {
+
+  moveToWatchEvent = (e) => {
+    e.preventDefault();
+    console.log(e.target.id)
+    this.props.moveToWatch(this.props.userMovie.id);
+  }
 
   moveToSeenEvent = (e) => {
     e.preventDefault();
@@ -34,8 +39,9 @@ class ListMovie extends React.Component {
           <div className="card-body">
             <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
             <h5 className="card-title">{userMovie.title}</h5>
-            <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>
-            <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>
+            {(userMovie.watchList ? "" : <Button outline onClick={this.moveToWatchEvent} className="ml-1 mr-1" color="primary">Wanna Watch</Button>)}
+            {(userMovie.seenList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
+            {(userMovie.shameList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
             <Button outline onClick={this.deleteUserMovieEvent} className="ml-1 mr-1" color="danger">Forget it</Button>
           </div>
         </div>

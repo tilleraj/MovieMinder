@@ -32,7 +32,11 @@ class MyLists extends React.Component {
       .catch(error => console.error(`could not get UserMoviesWithMovieData`, error));
   }
 
-
+  moveToWatch = (userMovieId) => {
+    userMovieData.moveLists(userMovieId, "watch")
+      .then(() => this.updateAllUserMovieData())
+      .catch(error => console.error('unable to move movie to watchlist', error));
+  }
 
   moveToSeen = (userMovieId) => {
     userMovieData.moveLists(userMovieId, "seen")
@@ -65,6 +69,7 @@ class MyLists extends React.Component {
       <ListMovie
         key={`userMovie${userMovie.id}`}
         userMovie={userMovie}
+        moveToWatch={this.moveToWatch}
         moveToSeen={this.moveToSeen}
         moveToShame={this.moveToShame}
         deleteUserMovie={this.deleteUserMovie}
