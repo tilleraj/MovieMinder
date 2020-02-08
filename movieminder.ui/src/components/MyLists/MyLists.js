@@ -54,10 +54,14 @@ class MyLists extends React.Component {
           <div className="card-body">
             <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
             <h5 className="card-title">{userMovie.title}</h5>
-            <p>id: {userMovie.id} userId: {userMovie.userId} movieId: {userMovie.movieId} watchList: {userMovie.watchList} seenList: {userMovie.seenList} shameList: {userMovie.shameList} releaseDate: {userMovie.releaseDate} leftTheaters: {userMovie.leftTheaters} retireDate: {userMovie.retireDate}</p>
-            <Button color="success">Watched it</Button>
-            <Button color="warning">Missed it</Button>
-            <Button color="danger">Forget it</Button>
+            <p>
+              id: {userMovie.id} userId: {userMovie.userId} movieId: {userMovie.movieId}
+              watchList: {userMovie.watchList} seenList: {userMovie.seenList} shameList: {userMovie.shameList}
+              releaseDate: {userMovie.releaseDate} leftTheaters: {userMovie.leftTheaters} retireDate: {userMovie.retireDate}
+            </p>
+            <Button className="ml-1 mr-1" color="success">Watched it</Button>
+            <Button className="ml-1 mr-1" color="warning">Missed it</Button>
+            <Button className="ml-1 mr-1" color="danger">Forget it</Button>
           </div>
         </div>
       </div >
