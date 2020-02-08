@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label
+} from 'reactstrap';
 
 import userMovieData from '../../data/UserMovieData';
 
@@ -8,7 +15,10 @@ class MyLists extends React.Component {
 
   state = {
     userMovies: [],
-    currentUser: {}
+    currentUser: {},
+    watchList: [],
+    seenList: [],
+    shameList: []
   }
 
   componentDidMount() {
@@ -22,34 +32,44 @@ class MyLists extends React.Component {
         let userMovies = resp.data;
         // console.error('AllUserMoviesWithMovieData:', userMovies);
         let freshUserMovies = [...userMovies];
-        this.setState({ userMovies: freshUserMovies })
+        this.setState({ userMovies: freshUserMovies });
+        this.sortMovies();
       })
       .catch(error => console.error(`could not get UserMoviesWithMovieData`, error));
   }
 
+  sortMovies() {
+    var userMovies = [...this.state.userMovies];
+    var newWatchList = userMovies.filter(movie => movie.watchList === true);
+    var newSeenList = userMovies.filter(movie => movie.seenList === true);
+    var newShameList = userMovies.filter(movie => movie.shameList === true);
+    this.setState({ watchList: [...newWatchList], seenList: [...newSeenList], shameList: [...newShameList] });
+  }
 
-  render() {
-    const testUserMovies = this.state.userMovies.map(userMovie => (
+  buildList(movieList) {
+    const builtList = movieList.map(userMovie => (
       <div className="col-xs-12 col-md-6 col-lg-4" key={`userMovie${userMovie.id}`}>
         <div className="card">
+          {/* <img className="card-img-top" src={userMovie.posterURL} alt="Card image cap" /> */}
           <div className="card-body">
-            <ul>
-              <li>id: {userMovie.id}</li>
-              <li>userId: {userMovie.userId}</li>
-              <li>movieId: {userMovie.movieId}</li>
-              <li>watchList: {userMovie.watchList}</li>
-              <li>seenList: {userMovie.seenList}</li>
-              <li>shameList: {userMovie.shameList}</li>
-              <li>title: {userMovie.title}</li>
-              <li>releaseDate: {userMovie.releaseDate}</li>
-              <li>leftTheaters: {userMovie.leftTheaters}</li>
-              <li>retireDate: {userMovie.retireDate}</li>
-              <li>posterURL: {userMovie.posterURL}</li>
-            </ul>
+            <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
+            <h5 className="card-title">{userMovie.title}</h5>
+            <p>id: {userMovie.id} userId: {userMovie.userId} movieId: {userMovie.movieId} watchList: {userMovie.watchList} seenList: {userMovie.seenList} shameList: {userMovie.shameList} releaseDate: {userMovie.releaseDate} leftTheaters: {userMovie.leftTheaters} retireDate: {userMovie.retireDate}</p>
+            <Button color="success">Watched it</Button>
+            <Button color="warning">Missed it</Button>
+            <Button color="danger">Forget it</Button>
           </div>
         </div>
-      </div>
+      </div >
     ));
+    return builtList
+  }
+
+  render() {
+    const { watchList, seenList, shameList } = this.state;
+    const builtWatchList = this.buildList(watchList);
+    const builtSeenList = this.buildList(seenList);
+    const builtShameList = this.buildList(shameList);
     return (
       <div className="MyLists">
         <div className="row">
@@ -60,7 +80,30 @@ class MyLists extends React.Component {
             </div>
             </div>
           </div>
-          {testUserMovies}
+          <div className="col-12">
+            <div className="card">
+              <div className="card-body">
+                Watch List
+            </div>
+            </div>
+          </div>
+          {builtWatchList}
+          <div className="col-12">
+            <div className="card">
+              <div className="card-body">
+                Seen List
+            </div>
+            </div>
+          </div>
+          {builtSeenList}
+          <div className="col-12">
+            <div className="card">
+              <div className="card-body">
+                Shame List
+            </div>
+            </div>
+          </div>
+          {builtShameList}
         </div>
       </div>
     );
