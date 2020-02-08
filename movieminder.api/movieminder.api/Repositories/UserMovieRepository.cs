@@ -46,5 +46,21 @@ namespace movieminder.api.Repositories
             }
         }
 
+        public bool UpdateUserMovie(UserMovie updateUserMovie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"UPDATE [dbo].[UserMovie]
+                           SET [UserId] = @UserId
+                              ,[MovieId] = @MovieId
+                              ,[WatchList] = @WatchList
+                              ,[SeenList] = @SeenList
+                              ,[ShameList] = @ShameList
+                         WHERE [Id] = @Id";
+
+                return db.Execute(sql, updateUserMovie) == 1;
+            }
+        }
+
     }
 }

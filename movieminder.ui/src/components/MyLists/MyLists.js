@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  Button,
-  Form,
-  FormGroup,
-  Input,
-  Label
-} from 'reactstrap';
 
+import ListMovie from '../ListMovie/ListMovie';
 import userMovieData from '../../data/UserMovieData';
 
 import './MyLists.scss';
@@ -38,6 +32,26 @@ class MyLists extends React.Component {
       .catch(error => console.error(`could not get UserMoviesWithMovieData`, error));
   }
 
+
+
+  moveToSeen = (userMovieId) => {
+    userMovieData.moveLists(userMovieId, "seen")
+      .then(() => this.updateAllUserMovieData())
+      .catch(error => console.error('unable to mark movie as seen', error));
+  }
+
+  moveToShame = (userMovieId) => {
+    userMovieData.moveLists(userMovieId, "shame")
+      .then(() => this.updateAllUserMovieData())
+      .catch(error => console.error('unable to mark movie as shame', error));
+  }
+
+  deleteUserMovie = (userMovieId) => {
+    userMovieData.deleteUserMovie(userMovieId)
+      .then(() => this.updateAllUserMovieData())
+      .catch(error => console.error('unable to delete movie', error));
+  }
+
   sortMovies() {
     var userMovies = [...this.state.userMovies];
     var newWatchList = userMovies.filter(movie => movie.watchList === true);
@@ -48,23 +62,13 @@ class MyLists extends React.Component {
 
   buildList(movieList) {
     const builtList = movieList.map(userMovie => (
-      <div className="col-xs-12 col-md-6 col-lg-4" key={`userMovie${userMovie.id}`}>
-        <div className="card">
-          {/* <img className="card-img-top" src={userMovie.posterURL} alt="Card image cap" /> */}
-          <div className="card-body">
-            <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
-            <h5 className="card-title">{userMovie.title}</h5>
-            <p>
-              id: {userMovie.id} userId: {userMovie.userId} movieId: {userMovie.movieId}
-              watchList: {userMovie.watchList} seenList: {userMovie.seenList} shameList: {userMovie.shameList}
-              releaseDate: {userMovie.releaseDate} leftTheaters: {userMovie.leftTheaters} retireDate: {userMovie.retireDate}
-            </p>
-            <Button className="ml-1 mr-1" color="success">Watched it</Button>
-            <Button className="ml-1 mr-1" color="warning">Missed it</Button>
-            <Button className="ml-1 mr-1" color="danger">Forget it</Button>
-          </div>
-        </div>
-      </div >
+      <ListMovie
+        key={`userMovie${userMovie.id}`}
+        userMovie={userMovie}
+        moveToSeen={this.moveToSeen}
+        moveToShame={this.moveToShame}
+        deleteUserMovie={this.deleteUserMovie}
+      />
     ));
     return builtList
   }

@@ -39,5 +39,31 @@ namespace movieminder.api.Controllers
             var userMovies = _repo.GetAllUserMoviesWithMovieDataByUser(userId);
             return userMovies;
         }
+
+        // GET api/usermovie/move/3/shame
+        [HttpPut("move/{id}/{destinationList}")]
+        public bool moveLists(int id, string destinationList)
+        {
+            var movieToMove = _repo.GetUserMovie(id);
+            switch (destinationList)
+            {
+                case "seen":
+                    movieToMove.WatchList = false;
+                    movieToMove.SeenList = true;
+                    movieToMove.ShameList = false;
+                    break;
+                case "shame":
+                    movieToMove.WatchList = false;
+                    movieToMove.SeenList = false;
+                    movieToMove.ShameList = true;
+                    break;
+                default:
+                    movieToMove.WatchList = false;
+                    movieToMove.SeenList = false;
+                    movieToMove.ShameList = true;
+                    break;
+            }
+            return _repo.UpdateUserMovie(movieToMove);
+        }
     }
 }
