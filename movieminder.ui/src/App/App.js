@@ -13,7 +13,7 @@ import firebaseConnection from '../requests/connection';
 
 import userData from '../data/UserData';
 
-import Auth from '../components/Auth/Auth';
+import Login from '../components/Login/Login';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
 import MyLists from '../components/MyLists/MyLists';
@@ -34,7 +34,7 @@ const PublicRoute = ({ component: Component, authed, profile, ...rest }) => {
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === true
     ? (<Component {...props} {...rest} />)
-    : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
+    : (<Redirect to={{ pathname: '/login', state: { from: props.location } }} />));
   return <Route render={props => routeChecker(props)} />;
 };
 
@@ -107,7 +107,7 @@ class App extends React.Component {
             <div className="row">
               <Switch>
                 {/* <PublicRoute path="/auth" component={Auth} authed={authed} /> */}
-                <PublicRoute path="/auth" component={Auth} authed={authed} profile={profile} setProfile={this.setProfile} />
+                <PublicRoute path="/login" component={Login} authed={authed} profile={profile} setProfile={this.setProfile} />
                 <PrivateRoute path="/home"
                   component={Home}
                   authed={authed}
