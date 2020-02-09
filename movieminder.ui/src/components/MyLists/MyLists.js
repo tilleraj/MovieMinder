@@ -66,9 +66,13 @@ class MyLists extends React.Component {
   addMovie = (newMovie) => {
     movieData.postMovie(newMovie)
       .then((addedMovie) => {
-        userMovieData.addUserMovie(5,addedMovie.data.id);
-        this.setState({ isEditing: false, formMovie: defaultMovie });
-        this.updateData();
+        // will need to replace "5" with user's actual ID once auth is up and working
+        userMovieData.addUserMovie(5, addedMovie.data.id)
+          .then(() => {
+            this.setState({ isEditing: false, formMovie: defaultMovie });
+            this.updateData();
+          })
+          .catch(error => console.error('unable to add userMovie', error));
       })
       .catch(error => console.error('unable to add Movie', error));
   }
@@ -103,14 +107,14 @@ class MyLists extends React.Component {
   }
 
   movieFormChange = (e) => {
-    const newFormMovie = {...this.state.formMovie};
-    if(e.target.id === "releaseDate"){
+    const newFormMovie = { ...this.state.formMovie };
+    if (e.target.id === "releaseDate") {
       newFormMovie.releaseDate = e.target.value;
     }
-    if(e.target.id === "posterURL"){
+    if (e.target.id === "posterURL") {
       newFormMovie.posterURL = e.target.value;
     }
-    if(e.target.id === "title"){
+    if (e.target.id === "title") {
       newFormMovie.title = e.target.value;
     }
     this.setState({ formMovie: newFormMovie });
