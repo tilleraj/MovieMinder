@@ -27,15 +27,22 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/movie/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public Movie GetMovie(int id)
         {
             return _repo.GetMovie(id);
         }
 
+        // GET api/movie/The Hunger Games
+        [HttpGet("{title}")]
+        public Movie GetMovieByTitle(string title)
+        {
+            return _repo.GetMovieByTitle(title);
+        }
+
         // POST api/movie/
         [HttpPost]
-        public bool AddMovie(AddMovieCommand movieToAdd)
+        public Movie AddMovie(AddMovieCommand movieToAdd)
         {
             return _repo.AddMovie(movieToAdd);
         }

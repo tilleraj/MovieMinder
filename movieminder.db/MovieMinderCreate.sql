@@ -116,7 +116,7 @@ CREATE TABLE [dbo].[UserMovie]
     [MovieId] INT NOT NULL
         FOREIGN KEY
         REFERENCES [Movie] (Id),
-    [WatchList] BIT NOT NULL default(0),
+    [WatchList] BIT NOT NULL default(1),
     [SeenList] BIT NOT NULL default(0),
     [ShameList] BIT NOT NULL default(0)
 );

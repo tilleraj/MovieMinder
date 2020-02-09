@@ -5,10 +5,11 @@ using System.Data.SqlClient;
 using movieminder.api.Models;
 using Dapper;
 using movieminder.api.Commands;
+using Microsoft.AspNetCore.Mvc;
 
 namespace movieminder.api.Repositories
 {
-    public class MovieRepository
+    public class MovieRepository : ControllerBase
     {
         string _connectionString = "Server=localhost; Database=MovieMinder; Trusted_Connection=True;";
 
@@ -42,19 +43,33 @@ namespace movieminder.api.Repositories
             }
         }
 
-        public bool AddMovie(AddMovieCommand movie)
+        public Movie GetMovieByTitle(string title)
         {
             using (var db = new SqlConnection(_connectionString))
             {
-                var sql = @"INSERT INTO [dbo].[Movie]
+                var sql = "select * from movie where [title] = @title";
+                var parameters = new { title };
+                var movie = db.QueryFirstOrDefault<Movie>(sql, parameters);
+                return movie;
+            }
+        }
+
+        public Movie AddMovie(AddMovieCommand movie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT [Movie]
                             ([Title]
                             ,[ReleaseDate]
                             ,[PosterURL])
+                            OUTPUT
+                            inserted.*
                             VALUES
-                            (@title
-                            ,@releaseDate
-                            ,@posterURL)";
-                return db.Execute(sql, movie) == 1;
+                            (
+                            @Title
+                            ,@ReleaseDate
+                            ,@PosterURL)";
+                return db.QueryFirst<Movie>(sql, movie);
             }
         }
 

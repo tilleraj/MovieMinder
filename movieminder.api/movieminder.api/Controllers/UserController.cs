@@ -25,10 +25,17 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/user/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public User GetUser(int id)
         {
             return _repo.GetUser(id);
+        }
+
+        // GET api/user/4
+        [HttpGet("{email}")]
+        public User GetUserByEmail(string email)
+        {
+            return _repo.GetUserByEmail(email);
         }
     }
 }

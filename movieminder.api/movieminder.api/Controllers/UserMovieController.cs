@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using movieminder.api.Commands;
 using movieminder.api.Models;
 using movieminder.api.Repositories;
 
@@ -25,7 +26,7 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/usermovie/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public UserMovie GetUserMovie(int id)
         {
             return _repo.GetUserMovie(id);
@@ -64,6 +65,13 @@ namespace movieminder.api.Controllers
                     break;
             }
             return _repo.UpdateUserMovie(movieToMove);
+        }
+
+        // POST api/usermovie/
+        [HttpPost]
+        public bool AddUserMovie(AddUserMovieCommand userMovieToAdd)
+        {
+            return _repo.AddUserMovie(userMovieToAdd);
         }
 
         // DELETE api/usermovie/7

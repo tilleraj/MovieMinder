@@ -65,7 +65,8 @@ class MyLists extends React.Component {
 
   addMovie = (newMovie) => {
     movieData.postMovie(newMovie)
-      .then(() => {
+      .then((addedMovie) => {
+        userMovieData.addUserMovie(5,addedMovie.data.id);
         this.setState({ isEditing: false, formMovie: defaultMovie });
         this.updateData();
       })

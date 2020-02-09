@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using movieminder.api.Models;
 using Dapper;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Repositories
 {
@@ -59,6 +60,20 @@ namespace movieminder.api.Repositories
                          WHERE [Id] = @Id";
 
                 return db.Execute(sql, updateUserMovie) == 1;
+            }
+        }
+
+        public bool AddUserMovie(AddUserMovieCommand userMovie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT INTO [dbo].[UserMovie]
+                            ([UserId]
+                            ,[MovieId])
+                            VALUES
+                            (@userId
+                            ,@movieId)";
+                return db.Execute(sql, userMovie) == 1;
             }
         }
 
