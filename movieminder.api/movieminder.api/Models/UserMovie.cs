@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace movieminder.api.DataModels
+namespace movieminder.api.Models
 {
     public class UserMovie
     {

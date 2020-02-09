@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using Dapper;
 
 namespace movieminder.api.Repositories
@@ -26,6 +26,17 @@ namespace movieminder.api.Repositories
             {
                 var sql = "select * from [User] where [id] = @id";
                 var parameters = new { id };
+                var user = db.QueryFirstOrDefault<User>(sql, parameters);
+                return user;
+            }
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = "select * from [User] where [email] = @email";
+                var parameters = new { email };
                 var user = db.QueryFirstOrDefault<User>(sql, parameters);
                 return user;
             }

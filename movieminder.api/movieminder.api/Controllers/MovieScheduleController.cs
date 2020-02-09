@@ -25,19 +25,19 @@ namespace movieminder.api.Controllers
             return movieSchedules;
         }
 
-        // GET api/schedule/concise
-        [HttpGet("concise")]
-        public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules()
+        // GET api/schedule/2020-02-10/concise
+        [HttpGet("{startDate}/concise")]
+        public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules(string startDate)
         {
-            var conciseMovieSchedules = _repo.GetAllConciseMovieSchedules();
+            var conciseMovieSchedules = _repo.GetAllConciseMovieSchedules(startDate);
             return conciseMovieSchedules;
         }
 
-        // GET api/schedule/MV007920380000
-        [HttpGet("{tmsId}")]
-        public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string tmsId)
+        // GET api/schedule/2020-02-10/MV007920380000
+        [HttpGet("{startDate}/{tmsId}")]
+        public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string tmsId)
         {
-            return _repo.GetMovieScheduleByTmsId(tmsId);
+            return _repo.GetMovieScheduleByTmsId(startDate, tmsId);
         }
 
     }

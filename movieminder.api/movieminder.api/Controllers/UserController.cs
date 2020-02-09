@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using movieminder.api.Repositories;
 
 namespace movieminder.api.Controllers
@@ -25,10 +25,17 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/user/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public User GetUser(int id)
         {
             return _repo.GetUser(id);
+        }
+
+        // GET api/user/4
+        [HttpGet("{email}")]
+        public User GetUserByEmail(string email)
+        {
+            return _repo.GetUserByEmail(email);
         }
     }
 }
