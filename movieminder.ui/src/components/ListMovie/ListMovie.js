@@ -9,25 +9,21 @@ class ListMovie extends React.Component {
 
   moveToWatchEvent = (e) => {
     e.preventDefault();
-    console.log(e.target.id)
     this.props.moveToWatch(this.props.userMovie.id);
   }
 
   moveToSeenEvent = (e) => {
     e.preventDefault();
-    console.log(e.target.id)
     this.props.moveToSeen(this.props.userMovie.id);
   }
 
   moveToShameEvent = (e) => {
     e.preventDefault();
-    console.log(e.target.id)
     this.props.moveToShame(this.props.userMovie.id);
   }
 
   deleteUserMovieEvent = (e) => {
     e.preventDefault();
-    console.log(e.target.id)
     this.props.deleteUserMovie(this.props.userMovie.id);
   }
 
