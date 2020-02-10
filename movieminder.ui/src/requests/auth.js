@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import axios from 'axios';
+
 const baseUrl = 'https://localhost:44305/api';
 
 // interceptors work by changing the outbound request before the xhr is sent 

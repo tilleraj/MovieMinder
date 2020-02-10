@@ -37,12 +37,11 @@ class NavBar extends React.Component {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
   }
 
-  // auth
   loginClickEvent = (event) => {
     event.preventDefault();
     authRequests.loginUser()
       .then(() => this.props.history.push('/home'))
-      .catch(error => console.error('there was an error in registering', error));
+      .catch(error => console.error('unable to login', error));
   };
 
   logoutClickEvent = () => {

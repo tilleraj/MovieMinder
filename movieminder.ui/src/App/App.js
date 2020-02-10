@@ -61,10 +61,11 @@ class App extends React.Component {
   state = {
     authed: false,
     isRegFormFirstLoad: false,
-    profile: null
+    profile: null,
+    email: null
   };
 
-  logout = () => this.setState({ authed: false, profile: null, isRegFormFirstLoad: false });
+  logout = () => this.setState({ authed: false, profile: null, email: null, isRegFormFirstLoad: false });
 
   setProfile = profile => this.setState({ profile, authed: true });
 
@@ -92,12 +93,16 @@ class App extends React.Component {
       .then((userProfile) => {
         this.setProfile(userProfile.data);
         console.log(userProfile);
+        if (userProfile.data === "") {
+          const noProfileEmail = firebase.auth().currentUser.email;
+          this.setState({ email: noProfileEmail });
+        }
       })
       .catch((error) => console.error('could not get profile', error));
   }
 
   render() {
-    const { authed, isRegFormFirstLoad, profile } = this.state;
+    const { authed, isRegFormFirstLoad, profile, email } = this.state;
 
     return (
       <div className="App">
@@ -112,6 +117,7 @@ class App extends React.Component {
                   component={Home}
                   authed={authed}
                   profile={profile}
+                  email={email}
                   isRegFormFirstLoad={isRegFormFirstLoad}
                   setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
                   setProfile={this.setProfile} />
