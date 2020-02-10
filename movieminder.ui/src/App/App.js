@@ -38,25 +38,6 @@ const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   return <Route render={props => routeChecker(props)} />;
 };
 
-// const PrivateRoute = ({ component: Component, authed, profile, ...rest }) => {
-//   const routeChecker = (props) => {
-//     if (authed === true && profile === "" || profile === null) {
-//       return (<Redirect to={{ pathname: '/register', state: { from: props.location } }} />)
-//     }
-//     if (authed === true && profile !== null) {
-//       return (<Component {...props} {...rest} />)
-//     }
-//     return (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
-//   }
-//   return <Route render={props => routeChecker(props)} />;
-// };
-
-const defaultProfile = {
-  username: '',
-  email: '',
-  zip: ''
-}
-
 class App extends React.Component {
   state = {
     authed: false,
@@ -92,7 +73,6 @@ class App extends React.Component {
     userData.getUserByEmail(user.email)
       .then((userProfile) => {
         this.setProfile(userProfile.data);
-        console.log(userProfile);
         if (userProfile.data === "") {
           const noProfileEmail = firebase.auth().currentUser.email;
           this.setState({ email: noProfileEmail });

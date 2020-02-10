@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import authRequests from '../../requests/auth';
@@ -12,25 +11,9 @@ class Login extends React.Component {
     response: null,
   }
 
-  // loginClickEvent = (e) => {
-  //   e.preventDefault();
-  //   const provider = new firebase.auth.GoogleAuthProvider();
-  //   firebase.auth().signInWithPopup(provider) //Don't do this
-  //     .then((response) => {
-  //       userData.getUserByEmail(response.user.email)
-  //         .then((userProfile) => {
-  //           this.props.setProfile(userProfile.data);
-  //           console.log(userProfile);
-  //         });
-  //     })
-  //     .catch((error) => console.error('could not login', error));
-  // };
-
   loginClickEvent = (e) => {
     e.preventDefault();
     authRequests.loginUser();
-    // this.props.setProfile(userProfile.data);
-    // console.log(userProfile);
   };
 
 

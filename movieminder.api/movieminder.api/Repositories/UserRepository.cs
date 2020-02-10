@@ -59,13 +59,6 @@ namespace movieminder.api.Repositories
         {
             using (var db = new SqlConnection(_connectionString))
             {
-                //var sql = @"INSERT INTO [User]([FirebaseUid], [Username], [Email], [Zip])
-                //            VALUES (
-                //              @FirebaseUid,
-                //              @Username,
-                //              @Email,
-                //              @Zip
-                //            )";
                 var sql = @"INSERT [User]
                             OUTPUT
                             inserted.*

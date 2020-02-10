@@ -1,5 +1,4 @@
 import React from 'react';
-import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import {
@@ -27,7 +26,6 @@ class Register extends React.Component {
     event.preventDefault();
     const newProfile = this.state.profile;
     newProfile.email = this.props.email;
-    console.error(this.state.profile);
     this.setState({ profile: defaultProfile });
     userData.addUser(newProfile)
       .then((response) => {

@@ -37,7 +37,6 @@ class MyLists extends React.Component {
     userMovieData.getAllUserMoviesWithMovieDataByUser(5)
       .then((resp) => {
         let userMovies = resp.data;
-        // console.error('AllUserMoviesWithMovieData:', userMovies);
         let freshUserMovies = [...userMovies];
         this.setState({ userMovies: freshUserMovies });
         this.sortMovies();
