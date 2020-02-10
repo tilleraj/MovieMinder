@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using movieminder.api.Commands;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using movieminder.api.Repositories;
 
 namespace movieminder.api.Controllers

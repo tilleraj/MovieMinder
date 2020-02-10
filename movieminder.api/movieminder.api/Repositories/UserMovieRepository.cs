@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using Dapper;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Repositories
 {
@@ -43,6 +44,49 @@ namespace movieminder.api.Repositories
                 var parameters = new { id };
                 var userMovie = db.Query<UserMovieWithMovieData>(sql, parameters);
                 return userMovie;
+            }
+        }
+
+        public bool UpdateUserMovie(UserMovie updateUserMovie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"UPDATE [dbo].[UserMovie]
+                           SET [UserId] = @UserId
+                              ,[MovieId] = @MovieId
+                              ,[WatchList] = @WatchList
+                              ,[SeenList] = @SeenList
+                              ,[ShameList] = @ShameList
+                         WHERE [Id] = @Id";
+
+                return db.Execute(sql, updateUserMovie) == 1;
+            }
+        }
+
+        public bool AddUserMovie(AddUserMovieCommand userMovie)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"INSERT INTO [dbo].[UserMovie]
+                            ([UserId]
+                            ,[MovieId])
+                            VALUES
+                            (@userId
+                            ,@movieId)";
+                return db.Execute(sql, userMovie) == 1;
+            }
+        }
+
+        public bool DeleteUserMovie(int id)
+        {
+            using (var db = new SqlConnection(_connectionString))
+            {
+                var sql = @"DELETE 
+                            FROM UserMovie 
+                            WHERE [Id] = @Id";
+                var parameters = new { id };
+
+                return db.Execute(sql, parameters) == 1;
             }
         }
 

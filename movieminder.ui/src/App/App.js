@@ -111,7 +111,6 @@ class App extends React.Component {
           <div className="container">
             <div className="row">
               <Switch>
-                {/* <PublicRoute path="/auth" component={Auth} authed={authed} /> */}
                 <PublicRoute path="/login" component={Login} authed={authed} profile={profile} setProfile={this.setProfile} />
                 <PrivateRoute path="/home"
                   component={Home}

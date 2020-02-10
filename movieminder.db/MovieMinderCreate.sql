@@ -80,23 +80,23 @@ GO
 -- Insert rows into table 'Movie' in schema '[dbo]'
 INSERT INTO [dbo].[Movie]
     ( -- Columns to insert data into
-    [Title], [ReleaseDate]
+    [Title], [ReleaseDate], [PosterURL]
     )
 VALUES
     ( -- First row: values for the columns in the list above
-        'Bad Boys for Life', '2020-01-16'
+        'Bad Boys for Life', '2020-01-16', 'https://m.media-amazon.com/images/M/MV5BMWU0MGYwZWQtMzcwYS00NWVhLTlkZTAtYWVjOTYwZTBhZTBiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     ( -- Second row: values for the columns in the list above
-        'Star Wars: The Rise of Skywalker', '2019-12-18'
+        'Star Wars: The Rise of Skywalker', '2019-12-18', 'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     ( -- Third row: values for the columns in the list above
-        'Frozen II', '2019-11-20'
+        'Frozen II', '2019-11-20', 'https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     ( -- Fourth row: values for the columns in the list above
-        '1917', '2019-01-23'
+        '1917', '2019-01-23', 'https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     (
-        'Jojo Rabbit', '2019-01-16'
+        'Jojo Rabbit', '2019-01-16', 'https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg'
 )
 GO
 
@@ -116,7 +116,7 @@ CREATE TABLE [dbo].[UserMovie]
     [MovieId] INT NOT NULL
         FOREIGN KEY
         REFERENCES [Movie] (Id),
-    [WatchList] BIT NOT NULL default(0),
+    [WatchList] BIT NOT NULL default(1),
     [SeenList] BIT NOT NULL default(0),
     [ShameList] BIT NOT NULL default(0)
 );

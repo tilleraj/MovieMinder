@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using movieminder.api.Repositories;
+using movieminder.api.Commands;
 
 namespace movieminder.api.Controllers
 {
@@ -26,10 +27,32 @@ namespace movieminder.api.Controllers
         }
 
         // GET api/movie/4
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public Movie GetMovie(int id)
         {
             return _repo.GetMovie(id);
+        }
+
+        // GET api/movie/The Hunger Games
+        [HttpGet("{title}")]
+        public Movie GetMovieByTitle(string title)
+        {
+            return _repo.GetMovieByTitle(title);
+        }
+
+        // POST api/movie/
+        [HttpPost]
+        public Movie AddMovie(AddMovieCommand movieToAdd)
+        {
+            return _repo.AddMovie(movieToAdd);
+        }
+
+        //PUT api/movie/4
+        [HttpPut("{movieId}")]
+        public bool UpdateMovie(Movie movieToUpdate, int movieId)
+        {
+            movieToUpdate.Id = movieId;
+            return _repo.UpdateMovie(movieToUpdate);
         }
     }
 }

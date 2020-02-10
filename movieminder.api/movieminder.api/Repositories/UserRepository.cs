@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using movieminder.api.DataModels;
+using movieminder.api.Models;
 using Dapper;
 using movieminder.api.Commands;
 
