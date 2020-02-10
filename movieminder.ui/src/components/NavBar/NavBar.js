@@ -37,12 +37,11 @@ class NavBar extends React.Component {
     this.setState({ dropdownOpen: !this.state.dropdownOpen });
   }
 
-  // auth
   loginClickEvent = (event) => {
     event.preventDefault();
     authRequests.loginUser()
       .then(() => this.props.history.push('/home'))
-      .catch(error => console.error('there was an error in registering', error));
+      .catch(error => console.error('unable to login', error));
   };
 
   logoutClickEvent = () => {
@@ -56,7 +55,8 @@ class NavBar extends React.Component {
   render() {
     const { authed, profile } = this.props;
     const buildNavbar = () => {
-      if (authed) {
+      if (authed && profile !== null && profile !== "") {
+        //  full Nav
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
@@ -73,22 +73,9 @@ class NavBar extends React.Component {
                 <DropdownToggle color="dark" caret nav>
                   {this.props.profile ? (this.props.profile.username) : ('Account')}</DropdownToggle>
                 <DropdownMenu>
-                  {profile ? (
-                    <DropdownItem>
-                      <NavItem>
-                        <NavLink tag={RRNavLink} to='/account' className="text-dark p-0">Profile</NavLink>
-                      </NavItem>
-                    </DropdownItem>
-                  ) : (
-                      <DropdownItem>
-                        <NavItem>
-                          <NavLink tag={RRNavLink} to='/register' className="text-dark p-0">Register</NavLink>
-                        </NavItem>
-                      </DropdownItem>
-                    )}
                   <DropdownItem>
                     <NavItem>
-                      <NavLink tag={RRNavLink} to='/apitest' className="text-dark p-0">API Test</NavLink>
+                      <NavLink tag={RRNavLink} to='/account' className="text-dark p-0">Profile</NavLink>
                     </NavItem>
                   </DropdownItem>
                   <DropdownItem>
@@ -101,19 +88,25 @@ class NavBar extends React.Component {
             </NavItem>
           </Nav>
         );
+      } else if (authed) {
+        //  authed, no profile
+        return (
+          <Nav navbar>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="pointer" onClick={this.logoutClickEvent} >Logout</NavLink>
+            </NavItem>
+          </Nav>
+        );
+      } else {
+        return (
+          // no auth
+          <Nav navbar>
+          </Nav >
+        );
       }
-      return (
-        <Nav navbar>
-          <NavItem>
-            <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="pointer" onClick={this.loginClickEvent} >
-              <i className="fab fa-google"></i> Login
-          </NavLink>
-          </NavItem>
-        </Nav>
-      );
     };
 
     return (
@@ -131,3 +124,64 @@ class NavBar extends React.Component {
 }
 
 export default withRouter(NavBar);
+
+
+
+// if (authed) {
+//   return (
+//     <Nav className="ml-auto" navbar>
+//       <NavItem>
+//         <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+//       </NavItem>
+//       <NavItem>
+//         <NavLink tag={RRNavLink} to='/mylists'>My Lists</NavLink>
+//       </NavItem>
+//       <NavItem>
+//         <NavLink tag={RRNavLink} to='/showtimes'>Now Showing</NavLink>
+//       </NavItem>
+//       <NavItem>
+//         <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown} inNavbar={true}>
+//           <DropdownToggle color="dark" caret nav>
+//             {this.props.profile ? (this.props.profile.username) : ('Account')}</DropdownToggle>
+//           <DropdownMenu>
+//             {profile ? (
+//               <DropdownItem>
+//                 <NavItem>
+//                   <NavLink tag={RRNavLink} to='/account' className="text-dark p-0">Profile</NavLink>
+//                 </NavItem>
+//               </DropdownItem>
+//             ) : (
+//                 <DropdownItem>
+//                   <NavItem>
+//                     <NavLink tag={RRNavLink} to='/register' className="text-dark p-0">Register</NavLink>
+//                   </NavItem>
+//                 </DropdownItem>
+//               )}
+//             <DropdownItem>
+//               <NavItem>
+//                 <NavLink tag={RRNavLink} to='/apitest' className="text-dark p-0">API Test</NavLink>
+//               </NavItem>
+//             </DropdownItem>
+//             <DropdownItem>
+//               <NavItem>
+//                 <NavLink className="text-dark p-0" onClick={this.logoutClickEvent}>Logout</NavLink>
+//               </NavItem>
+//             </DropdownItem>
+//           </DropdownMenu>
+//         </Dropdown>
+//       </NavItem>
+//     </Nav>
+//   );
+// }
+// return (
+//   <Nav navbar>
+//     <NavItem>
+//       <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+//     </NavItem>
+//     <NavItem>
+//       <NavLink className="pointer" onClick={this.loginClickEvent} >
+//         <i className="fab fa-google"></i> Login
+//     </NavLink>
+//     </NavItem>
+//   </Nav>
+// );

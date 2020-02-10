@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const baseUrl = 'https://localhost:44354';
+const baseUrl = 'https://localhost:44354/api/user';
 
 const getAllUsers = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/api/User`)
+  axios.get(`${baseUrl}`)
     .then((result) => {
       resolve(result);
     })
@@ -12,10 +12,16 @@ const getAllUsers = () => new Promise((resolve, reject) => {
     });
 });
 
-const getUserById = (userId) => axios.get(`${baseUrl}/api/user/${userId}`);
+const getUserByEmail = (email) => axios.get(`${baseUrl}/${email}`);
+const getUserById = (userId) => axios.get(`${baseUrl}/${userId}`);
+const getUserByFirebaseId = (firbaseUid) => axios.get(`${baseUrl}/uid/${firbaseUid}`);
 
+const addUser = (user) => axios.post(baseUrl, user);
 
 export default {
+  addUser,
   getAllUsers,
-  getUserById
+  getUserByEmail,
+  getUserById,
+  getUserByFirebaseId
 }

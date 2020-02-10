@@ -1,23 +1,25 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import firebase from 'firebase/app';
 import 'firebase/auth';
-import './Auth.scss';
 
-class Auth extends React.Component {
+import authRequests from '../../requests/auth';
 
-  componentDidMount() {
+import './Login.scss';
+
+class Login extends React.Component {
+  state = {
+    response: null,
   }
 
   loginClickEvent = (e) => {
     e.preventDefault();
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+    authRequests.loginUser();
   };
+
 
   render() {
     return (
-      <div className="Auth col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
+      <div className="Login col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
         <div className="card">
           <h1>Welcome to MovieMinder!</h1>
           <p>Always meaning to go to movies in theaters?</p>
@@ -30,4 +32,4 @@ class Auth extends React.Component {
   }
 }
 
-export default Auth;
+export default Login;
