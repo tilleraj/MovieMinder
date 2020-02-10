@@ -69,7 +69,7 @@ namespace movieminder.api.Repositories
                 var sql = @"INSERT [User]
                             OUTPUT
                             inserted.*
-                            VALUES
+                            VALUESgit a
                             (
                             @FirebaseUid,
                             @Username,

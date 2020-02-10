@@ -10,7 +10,7 @@ class Home extends React.Component {
 
 
   render() {
-    const { profile } = this.props;
+    const { profile, email } = this.props;
     const checkRegistration = () => {
       if (profile === null || profile === "") {
         return (
