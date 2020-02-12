@@ -17,15 +17,15 @@ namespace movieminder.api.Controllers
             _repo = repo;
         }
 
-        // GET api/schedule
-        [HttpGet]
-        public IEnumerable<MovieSchedule> GetMovieSchedules()
+        // GET api/schedule/2020-02-10/37205/
+        [HttpGet("{startDate}/{zip}")]
+        public IEnumerable<MovieSchedule> GetMovieSchedules(string startDate, string zip)
         {
-            var movieSchedules = _repo.GetAllMovieSchedules();
+            var movieSchedules = _repo.GetAllMovieSchedules(startDate, zip);
             return movieSchedules;
         }
 
-        // GET api/schedule/2020-02-10/concise
+        // GET api/schedule/2020-02-10/37205/concise
         [HttpGet("{startDate}/{zip}/concise")]
         public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules(string startDate, string zip)
         {

@@ -19,11 +19,11 @@ namespace movieminder.api.Repositories
             _config = config;
         }
 
-        public List<MovieSchedule> GetAllMovieSchedules()
+        public List<MovieSchedule> GetAllMovieSchedules(string startDate, string zip)
         {
             var key = _config.GetSection("gracenoteKey").Value;
 
-            var request = new RestRequest($"showings?startDate=2020-02-04&zip=37205&api_key={key}");
+            var request = new RestRequest($"showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
 
             return movieSchedules.Data;
