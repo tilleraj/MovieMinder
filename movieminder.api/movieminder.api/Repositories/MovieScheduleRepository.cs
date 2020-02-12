@@ -29,20 +29,20 @@ namespace movieminder.api.Repositories
             return movieSchedules.Data;
         }
 
-        public List<MovieScheduleConcise> GetAllConciseMovieSchedules(string startDate)
+        public List<MovieScheduleConcise> GetAllConciseMovieSchedules(string startDate, string zip)
         {
             var key = _config.GetSection("gracenoteKey").Value;
 
-            var request = new RestRequest($"showings?startDate={startDate}&zip=37205&api_key={key}");
+            var request = new RestRequest($"showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieScheduleConcise>>(request);
 
             return movieSchedules.Data;
         }
 
-        public List<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string tmsId)
+        public List<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string zip, string tmsId)
         {
             var key = _config.GetSection("gracenoteKey").Value;
-            var request = new RestRequest($"/{tmsId}/showings?startDate={startDate}&zip=37205&api_key={key}");
+            var request = new RestRequest($"/{tmsId}/showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
 
             return movieSchedules.Data;

@@ -20,8 +20,9 @@ class NowShowing extends React.Component {
     const today = new Date(Date.now());
     const isoDate = today.toISOString();
     const shortDate = isoDate.substring(0, 10)
+    const zip = this.props.profile.zip;
     // This is an example of a movie schedule query
-    movieScheduleData.getConciseMovieSchedule(shortDate)
+    movieScheduleData.getConciseMovieSchedule(shortDate, zip)
       .then((resp) => {
         let movieSchedules = resp.data;
         let freshMovieSchedules = [...movieSchedules];
