@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: hsla(0, 5%, 23%, 1);
+  // Photo by Felix Mooneeram on Unsplash https://unsplash.com/@felixmooneeram
+  background-image:
+  linear-gradient(to bottom, hsla(0, 15%, 15%, 0.25),hsla(0, 25%, 10%, .5)),
+  url('https://raw.githubusercontent.com/tilleraj/MovieMinder/master/movieminder.ui/assets/theatre.jpg');
+  background-size: auto 150vh;
+  background-position: top center;
+}
