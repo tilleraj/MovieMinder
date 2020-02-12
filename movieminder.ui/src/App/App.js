@@ -13,6 +13,7 @@ import firebaseConnection from '../requests/connection';
 
 import userData from '../data/UserData';
 
+import Account from '../components/Account/Account';
 import Login from '../components/Login/Login';
 import NavBar from '../components/NavBar/NavBar';
 import Home from '../components/Home/Home';
@@ -100,6 +101,7 @@ class App extends React.Component {
                   isRegFormFirstLoad={isRegFormFirstLoad}
                   setIsRegFormFirstLoadToTrue={this.setIsRegFormFirstLoadToTrue}
                   setProfile={this.setProfile} />
+                <PrivateRoute path="/account" component={Account} authed={authed} profile={profile} />
                 <PrivateRoute path="/mylists" component={MyLists} authed={authed} profile={profile} />
                 <PrivateRoute path="/register" component={Register} authed={authed} profile={profile} setProfile={this.setProfile} />
                 <PrivateRoute path="/showtimes" component={NowShowing} authed={authed} profile={profile} />
