@@ -33,8 +33,8 @@ class MyLists extends React.Component {
   }
 
   updateData() {
-    // This is data for a test user. Will need to get user profile in App and pass as a prop in the routing once profile creation is done
-    userMovieData.getAllUserMoviesWithMovieDataByUser(5)
+    const userId = this.props.profile.id;
+    userMovieData.getAllUserMoviesWithMovieDataByUser(userId)
       .then((resp) => {
         let userMovies = resp.data;
         let freshUserMovies = [...userMovies];
@@ -63,10 +63,10 @@ class MyLists extends React.Component {
   }
 
   addMovie = (newMovie) => {
+    const userId = this.props.profile.id;
     movieData.postMovie(newMovie)
       .then((addedMovie) => {
-        // will need to replace "5" with user's actual ID once auth is up and working
-        userMovieData.addUserMovie(5, addedMovie.data.id)
+        userMovieData.addUserMovie(userId, addedMovie.data.id)
           .then(() => {
             this.setState({ isEditing: false, formMovie: defaultMovie });
             this.updateData();

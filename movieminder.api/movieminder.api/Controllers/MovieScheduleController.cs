@@ -17,27 +17,27 @@ namespace movieminder.api.Controllers
             _repo = repo;
         }
 
-        // GET api/schedule
-        [HttpGet]
-        public IEnumerable<MovieSchedule> GetMovieSchedules()
+        // GET api/schedule/2020-02-10/37205/
+        [HttpGet("{startDate}/{zip}")]
+        public IEnumerable<MovieSchedule> GetMovieSchedules(string startDate, string zip)
         {
-            var movieSchedules = _repo.GetAllMovieSchedules();
+            var movieSchedules = _repo.GetAllMovieSchedules(startDate, zip);
             return movieSchedules;
         }
 
-        // GET api/schedule/2020-02-10/concise
-        [HttpGet("{startDate}/concise")]
-        public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules(string startDate)
+        // GET api/schedule/2020-02-10/37205/concise
+        [HttpGet("{startDate}/{zip}/concise")]
+        public IEnumerable<MovieScheduleConcise> GetConciseMovieSchedules(string startDate, string zip)
         {
-            var conciseMovieSchedules = _repo.GetAllConciseMovieSchedules(startDate);
+            var conciseMovieSchedules = _repo.GetAllConciseMovieSchedules(startDate, zip);
             return conciseMovieSchedules;
         }
 
         // GET api/schedule/2020-02-10/MV007920380000
-        [HttpGet("{startDate}/{tmsId}")]
-        public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string tmsId)
+        [HttpGet("{startDate}/{zip}/{tmsId}")]
+        public IEnumerable<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string zip, string tmsId)
         {
-            return _repo.GetMovieScheduleByTmsId(startDate, tmsId);
+            return _repo.GetMovieScheduleByTmsId(startDate, zip, tmsId);
         }
 
     }

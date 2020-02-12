@@ -1,5 +1,6 @@
 import React from 'react';
 import movieScheduleData from '../../data/MovieScheduleData';
+import utilities from '../../data/utilities';
 
 import MovieSchedule from '../MovieSchedule/MovieSchedule';
 
@@ -16,8 +17,12 @@ class NowShowing extends React.Component {
   }
 
   getTestMovieSchedule() {
+    const today = new Date(Date.now());
+    const isoDate = today.toISOString();
+    const shortDate = isoDate.substring(0, 10)
+    const zip = this.props.profile.zip;
     // This is an example of a movie schedule query
-    movieScheduleData.getConciseMovieSchedule("2020-02-10")
+    movieScheduleData.getConciseMovieSchedule(shortDate, zip)
       .then((resp) => {
         let movieSchedules = resp.data;
         let freshMovieSchedules = [...movieSchedules];
@@ -25,6 +30,8 @@ class NowShowing extends React.Component {
       })
       .catch(error => console.error(`could not get MovieScheduleData`, error));
   }
+
+
 
   buildMovieList(movie) {
     const builtList = movie.showtimes.map(showtime => (
@@ -37,7 +44,10 @@ class NowShowing extends React.Component {
 
   render() {
     const { movieSchedules } = this.state;
-    const moviesWithTimes = movieSchedules.map(movie => (
+
+    const sortedMovies = utilities.alphabetize(movieSchedules, 'title', 'asc');
+
+    const moviesWithTimes = sortedMovies.map(movie => (
       <MovieSchedule
         key={`movieSchedule${movie.tmsId}`}
         movie={movie}

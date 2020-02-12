@@ -11,9 +11,9 @@ class MovieSchedule extends React.Component {
 
   render() {
     const { movie } = this.props;
-    const showtimes = movie.showtimes.map((showtime, index) => (
+    const showtimes = movie.showtimes.map((showtime) => (
       <Showtime
-        key={`what${movie.tmsId}${showtime.dateTime}`}
+        key={`what${movie.tmsId}where${showtime.theatre.id}when${showtime.dateTime}`}
         showtime={showtime}
       />
     ));
