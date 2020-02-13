@@ -14,7 +14,7 @@ class Account extends React.Component {
         <div className="Account">
           <div className="card">
             <div className="card-body">
-              <Button outline ><i className="fas fa-pencil-alt"></i></Button>
+              {/* <Button outline ><i className="fas fa-pencil-alt"></i></Button> */}
               {/* <p>Search Radius:</p> */}
               <table className="table table-borderless">
                 <tbody>

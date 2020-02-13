@@ -1,10 +1,10 @@
 import React from 'react';
 import {
   Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle
+  // Dropdown,
+  // DropdownItem,
+  // DropdownMenu,
+  // DropdownToggle
 } from 'reactstrap';
 
 import './ListMovie.scss';
@@ -61,9 +61,9 @@ class ListMovie extends React.Component {
             {(userMovie.seenList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
             {(userMovie.shameList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
             <Button outline onClick={this.deleteUserMovieEvent} className="ml-1 mr-1" color="danger">Forget it</Button>
-            <Button outline ><i className="fas fa-trash-alt"></i></Button>
-            <Button outline ><i className="fas fa-pencil-alt"></i></Button>
-
+            {/* <Button outline ><i className="fas fa-trash-alt"></i></Button>
+            <Button outline ><i className="fas fa-pencil-alt"></i></Button> */}
+{/* 
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown} inNavbar={false}>
               <DropdownToggle color="dark" caret nav>
                 Account</DropdownToggle>
@@ -75,7 +75,7 @@ class ListMovie extends React.Component {
                   Delete<i className="fas fa-trash-alt"></i>
                 </DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
           </div>
         </div>
       </div >
