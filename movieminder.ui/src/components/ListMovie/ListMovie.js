@@ -1,11 +1,23 @@
 import React from 'react';
 import {
-  Button
+  Button,
+  // Dropdown,
+  // DropdownItem,
+  // DropdownMenu,
+  // DropdownToggle
 } from 'reactstrap';
 
 import './ListMovie.scss';
 
 class ListMovie extends React.Component {
+
+  state = {
+    dropdownOpen: false
+  }
+
+  toggleDropdown = () => {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  }
 
   moveToWatchEvent = (e) => {
     e.preventDefault();
@@ -49,6 +61,21 @@ class ListMovie extends React.Component {
             {(userMovie.seenList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
             {(userMovie.shameList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
             <Button outline onClick={this.deleteUserMovieEvent} className="ml-1 mr-1" color="danger">Forget it</Button>
+            {/* <Button outline ><i className="fas fa-trash-alt"></i></Button>
+            <Button outline ><i className="fas fa-pencil-alt"></i></Button> */}
+{/* 
+            <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown} inNavbar={false}>
+              <DropdownToggle color="dark" caret nav>
+                Account</DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>
+                  Edit<i className="fas fa-pencil-alt"></i>
+                </DropdownItem>
+                <DropdownItem>
+                  Delete<i className="fas fa-trash-alt"></i>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown> */}
           </div>
         </div>
       </div >
