@@ -15,7 +15,6 @@ const getAllMovies = () => new Promise((resolve, reject) => {
 const getMovieById = (movieId) => axios.get(`${baseUrl}/api/movie/${movieId}`);
 
 const postMovie = (newMovie, searchResult) => new Promise((resolve, reject) => {
-  console.log(searchResult);
   let movie = searchResult;
   let newMovieWithData = newMovie;
   if (movie.releaseDate.length > 8 && newMovie.releaseDate === "") {
@@ -27,7 +26,6 @@ const postMovie = (newMovie, searchResult) => new Promise((resolve, reject) => {
   if (movie.title !== "") {
     newMovieWithData.title = movie.title;
   }
-  console.log(newMovieWithData);
   axios.post(`${baseUrl}/api/movie`, newMovieWithData)
     .then((response) => {
       resolve(response.data);
