@@ -4,6 +4,7 @@ import ListMovie from '../ListMovie/ListMovie';
 import MovieForm from '../MovieForm/MovieForm';
 import movieData from '../../data/MovieData';
 import userMovieData from '../../data/UserMovieData';
+import utilities from '../../data/utilities';
 
 import './MyLists.scss';
 
@@ -120,9 +121,10 @@ class MyLists extends React.Component {
 
   sortMovies() {
     var userMovies = [...this.state.userMovies];
-    var newWatchList = userMovies.filter(movie => movie.watchList === true);
-    var newSeenList = userMovies.filter(movie => movie.seenList === true);
-    var newShameList = userMovies.filter(movie => movie.shameList === true);
+    const sortedMovies = utilities.alphabetize(userMovies, 'title', 'asc');
+    var newWatchList = sortedMovies.filter(movie => movie.watchList === true);
+    var newSeenList = sortedMovies.filter(movie => movie.seenList === true);
+    var newShameList = sortedMovies.filter(movie => movie.shameList === true);
     this.setState({ watchList: [...newWatchList], seenList: [...newSeenList], shameList: [...newShameList] });
   }
 
