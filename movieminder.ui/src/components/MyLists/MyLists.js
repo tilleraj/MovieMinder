@@ -4,6 +4,7 @@ import ListMovie from '../ListMovie/ListMovie';
 import MovieForm from '../MovieForm/MovieForm';
 import movieData from '../../data/MovieData';
 import userMovieData from '../../data/UserMovieData';
+import utilities from '../../data/utilities';
 
 import './MyLists.scss';
 
@@ -62,19 +63,18 @@ class MyLists extends React.Component {
       .catch(error => console.error('unable to update Movie', error));
   }
 
-  addMovie = (newMovie) => {
-    const userId = this.props.profile.id;
-    movieData.postMovie(newMovie)
-      .then((addedMovie) => {
-        userMovieData.addUserMovie(userId, addedMovie.data.id)
-          .then(() => {
-            this.setState({ isEditing: false, formMovie: defaultMovie });
-            this.updateData();
-          })
-          .catch(error => console.error('unable to add userMovie', error));
+  // new everything with promises
+  addMovie = newMovie => {
+    movieData.searchMovieByTitle(newMovie.title)
+      .then(searchResult => movieData.postMovie(newMovie, searchResult))
+      .then(addedMovie => userMovieData.addUserMovie(this.props.profile.id, addedMovie.id))
+      .then(() => {
+        this.setState({ isEditing: false, formMovie: defaultMovie });
+        this.updateData();
       })
       .catch(error => console.error('unable to add Movie', error));
   }
+
 
   moveToWatch = (userMovieId) => {
     userMovieData.moveLists(userMovieId, "watch")
@@ -121,9 +121,10 @@ class MyLists extends React.Component {
 
   sortMovies() {
     var userMovies = [...this.state.userMovies];
-    var newWatchList = userMovies.filter(movie => movie.watchList === true);
-    var newSeenList = userMovies.filter(movie => movie.seenList === true);
-    var newShameList = userMovies.filter(movie => movie.shameList === true);
+    const sortedMovies = utilities.alphabetize(userMovies, 'title', 'asc');
+    var newWatchList = sortedMovies.filter(movie => movie.watchList === true);
+    var newSeenList = sortedMovies.filter(movie => movie.seenList === true);
+    var newShameList = sortedMovies.filter(movie => movie.shameList === true);
     this.setState({ watchList: [...newWatchList], seenList: [...newSeenList], shameList: [...newShameList] });
   }
 
