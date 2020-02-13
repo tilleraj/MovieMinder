@@ -18,8 +18,11 @@ const postMovie = (newMovie, searchResult) => new Promise((resolve, reject) => {
   console.log(searchResult);
   let movie = searchResult;
   let newMovieWithData = newMovie;
-  newMovieWithData.releaseDate = movie.releaseDate;
+  if (movie.releaseDate.length > 8) {
+    newMovieWithData.releaseDate = movie.releaseDate;
+  }
   newMovieWithData.posterURL = movie.imageUrl;
+  newMovieWithData.title = movie.title;
   console.log(newMovieWithData);
   axios.post(`${baseUrl}/api/movie`, newMovieWithData)
     .then((response) => {

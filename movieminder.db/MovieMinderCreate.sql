@@ -70,7 +70,7 @@ CREATE TABLE [dbo].[Movie]
 (
     [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     [Title] NVARCHAR(100) NOT NULL,
-    [ReleaseDate] DATE NOT NULL,
+    [ReleaseDate] DATE,
     [LeftTheaters] BIT NOT NULL default(0),
     [RetireDate] DATE,
     [PosterURL] NVARCHAR (300)
@@ -93,10 +93,10 @@ VALUES
         'Frozen II', '2019-11-20', 'https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     ( -- Fourth row: values for the columns in the list above
-        '1917', '2019-01-23', 'https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX182_CR0,0,182,268_AL_.jpg'
+        '1917', '2019-12-04', 'https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX182_CR0,0,182,268_AL_.jpg'
 ),
     (
-        'Jojo Rabbit', '2019-01-16', 'https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg'
+        'Jojo Rabbit', '2019-10-08', 'https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg'
 )
 GO
 
