@@ -44,7 +44,7 @@ class ListMovie extends React.Component {
           <div className="card-body">
             <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
             <h5 className="card-title">{userMovie.title}</h5>
-            <p className="card-text">Released: {daysSinceReleased} days ago</p>
+            <p className="card-text">{(daysSinceReleased < 0 ? `Releases in ${-daysSinceReleased} days` : `Released ${daysSinceReleased} days ago`)}</p>
             {(userMovie.watchList ? "" : <Button outline onClick={this.moveToWatchEvent} className="ml-1 mr-1" color="primary">Wanna Watch</Button>)}
             {(userMovie.seenList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
             {(userMovie.shameList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
