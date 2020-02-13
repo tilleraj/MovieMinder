@@ -63,18 +63,35 @@ class MyLists extends React.Component {
   }
 
   addMovie = (newMovie) => {
-    const userId = this.props.profile.id;
-    movieData.postMovie(newMovie)
-      .then((addedMovie) => {
-        userMovieData.addUserMovie(userId, addedMovie.data.id)
-          .then(() => {
-            this.setState({ isEditing: false, formMovie: defaultMovie });
-            this.updateData();
-          })
-          .catch(error => console.error('unable to add userMovie', error));
+    movieData.searchMovieByTitle(newMovie.title)
+      .then((searchResult) => {
+        let movie = searchResult.data;
+        console.log(movie);
+        let newMovieWithData = newMovie;
+        if (movie.tmsId !== null) {
+          newMovieWithData.releaseDate = movie.releaseDate;
+          newMovieWithData.posterURL = movie.posterURL;
+          console.log(newMovieWithData);
+        }
+        return (newMovieWithData)
+      })
+      .then((newMovieWithData) => {
+        movieData.postMovie(newMovieWithData);
       })
       .catch(error => console.error('unable to add Movie', error));
   }
+
+  // const userId = this.props.profile.id;
+  // movieData.postMovie(newMovieWithData)
+  //   .then((addedMovie) => {
+  //     userMovieData.addUserMovie(userId, addedMovie.data.id)
+  //       .then(() => {
+  //         this.setState({ isEditing: false, formMovie: defaultMovie });
+  //         this.updateData();
+  //       })
+  //       .catch(error => console.error('unable to add userMovie', error));
+  //   })
+  //   .catch(error => console.error('unable to add Movie', error));
 
   moveToWatch = (userMovieId) => {
     userMovieData.moveLists(userMovieId, "watch")

@@ -42,7 +42,7 @@ namespace movieminder.api.Controllers
 
         // GET api/schedule/image/The Hunger Games
         [HttpGet("search/{title}")]
-        public SearchResult SearchMovieByTitle(string title)
+        public SearchResultConcise SearchMovieByTitle(string title)
         {
             return _repo.SearchMovieByTitle(title);
         }

@@ -48,13 +48,22 @@ namespace movieminder.api.Repositories
             return movieSchedules.Data;
         }
 
-        public SearchResult SearchMovieByTitle(string title)
+        public SearchResultConcise SearchMovieByTitle(string title)
         {
             var key = _config.GetSection("gracenoteKey").Value;
             var request = new RestRequest($"programs/search?q={title}&queryFields=title&entityType=movie&titleLang=en&descriptionLang=en&limit=1&api_key={key}");
-            var searchMovie = _client.Get<SearchResult>(request);
+            var searchResult = _client.Get<SearchResult>(request);
+            var searchResultConcise = new SearchResultConcise();
+            if (searchResult.Data.hitCount > 0)
+            {
+                searchResultConcise.tmsId = searchResult.Data.hits[0].program.tmsId;
+                searchResultConcise.title = searchResult.Data.hits[0].program.title;
+                searchResultConcise.releaseDate = searchResult.Data.hits[0].program.releaseDate;
+                var fullImageUrl = "http://developer.tmsimg.com/" + searchResult.Data.hits[0].program.preferredImage.uri + "?api_key=" + key;
+                searchResultConcise.imageUrl = fullImageUrl;
+            }
 
-            return searchMovie.Data;
+            return searchResultConcise;
         }
     }
 }
