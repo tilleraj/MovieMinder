@@ -13,8 +13,29 @@ const getAllMovies = () => new Promise((resolve, reject) => {
 });
 
 const getMovieById = (movieId) => axios.get(`${baseUrl}/api/movie/${movieId}`);
-const postMovie = newMovie => axios.post(`${baseUrl}/api/movie`, newMovie);
-const searchMovieByTitle = title => axios.get(`${baseUrl}/api/schedule/search/${title}`)
+
+const postMovie = (newMovie, searchResult) => new Promise((resolve, reject) => {
+  console.log(searchResult);
+  let movie = searchResult;
+  let newMovieWithData = newMovie;
+  newMovieWithData.releaseDate = movie.releaseDate;
+  newMovieWithData.posterURL = movie.imageUrl;
+  console.log(newMovieWithData);
+  axios.post(`${baseUrl}/api/movie`, newMovieWithData)
+    .then((response) => {
+      resolve(response.data);
+    })
+    .catch(err => reject(err));
+});
+
+const searchMovieByTitle = title => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/api/schedule/search/${title}`)
+    .then((response) => {
+      resolve(response.data);
+    })
+    .catch(err => reject(err));
+});
+
 const updateMovie = (movieId, updatedMovie) => axios.put(`${baseUrl}/api/movie/${movieId}`, updatedMovie);
 
 
