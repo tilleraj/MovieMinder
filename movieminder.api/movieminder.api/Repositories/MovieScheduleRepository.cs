@@ -15,7 +15,7 @@ namespace movieminder.api.Repositories
 
         public MovieScheduleRepository(IConfiguration config)
         {
-            _client = new RestClient("http://data.tmsapi.com/v1.1/movies/");
+            _client = new RestClient("http://data.tmsapi.com/v1.1/");
             _config = config;
         }
 
@@ -23,7 +23,7 @@ namespace movieminder.api.Repositories
         {
             var key = _config.GetSection("gracenoteKey").Value;
 
-            var request = new RestRequest($"showings?startDate={startDate}&zip={zip}&api_key={key}");
+            var request = new RestRequest($"movies/showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
 
             return movieSchedules.Data;
@@ -33,7 +33,7 @@ namespace movieminder.api.Repositories
         {
             var key = _config.GetSection("gracenoteKey").Value;
 
-            var request = new RestRequest($"showings?startDate={startDate}&zip={zip}&api_key={key}");
+            var request = new RestRequest($"movies/showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieScheduleConcise>>(request);
 
             return movieSchedules.Data;
@@ -42,10 +42,20 @@ namespace movieminder.api.Repositories
         public List<MovieSchedule> GetMovieScheduleByTmsId(string startDate, string zip, string tmsId)
         {
             var key = _config.GetSection("gracenoteKey").Value;
-            var request = new RestRequest($"/{tmsId}/showings?startDate={startDate}&zip={zip}&api_key={key}");
+            var request = new RestRequest($"movies/{tmsId}/showings?startDate={startDate}&zip={zip}&api_key={key}");
             var movieSchedules = _client.Get<List<MovieSchedule>>(request);
 
             return movieSchedules.Data;
         }
+
+        public SearchResult SearchMovieByTitle(string title)
+        {
+            var key = _config.GetSection("gracenoteKey").Value;
+            var request = new RestRequest($"programs/search?q={title}&queryFields=title&entityType=movie&titleLang=en&descriptionLang=en&limit=1&api_key={key}");
+            var searchMovie = _client.Get<SearchResult>(request);
+
+            return searchMovie.Data;
+        }
     }
 }
+
