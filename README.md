@@ -8,6 +8,10 @@ off into the sunset can be daunting. MovieMinder was built to solve this problem
 
 ![Screenshot of home page with movies in the Watch List, Seen List, and Shame List](https://raw.githubusercontent.com/tilleraj/MovieMinder/master/movieminder.ui/assets/screenshots/MyLists.png)
 
+## Showtimes
+Users can browse local showtimes including ticket links
+![Screenshot of Now Showing page with lists of showtimes by film and theater](https://raw.githubusercontent.com/tilleraj/MovieMinder/master/movieminder.ui/assets/screenshots/ShowTimesCropped.png)
+
 ## Technologies
 MovieMinder is built with a React.js and Boostrap front-end, an ASP.NET Core back-end (including commercial WebAPI calls), and a SQL database.
 
