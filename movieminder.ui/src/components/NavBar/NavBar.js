@@ -59,11 +59,11 @@ class NavBar extends React.Component {
         //  full Nav
         return (
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
-              <NavLink tag={RRNavLink} to='/mylists'>My Lists</NavLink>
+              <NavLink tag={RRNavLink} to='/home'>My Lists</NavLink>
             </NavItem>
             <NavItem>
               <NavLink tag={RRNavLink} to='/showtimes'>Now Showing</NavLink>
