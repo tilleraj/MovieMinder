@@ -17,23 +17,21 @@ class Home extends React.Component {
           < Register {...this.props} />)
       } else {
         return (
-          <div>
-            <button type="button" className="btn btn-primary">This is a Homepage</button>
-            <Button>Welcome {this.props.profile.userName}</Button>
+          <div className="card">
+            <div className="card-body">
+              <button type="button" className="btn btn-primary">This is a Homepage</button>
+              <Button>Welcome {this.props.profile.userName}</Button>
+            </div>
           </div>
         );
       }
     }
     return (
-      <div className="Home">
-        <div className="col">
-          <div className="card">
-            <div className="card-body">
-              {checkRegistration()}
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="col">
+        <div className="Home">
+          {checkRegistration()}
+        </div >
+      </div >
     );
   }
 }

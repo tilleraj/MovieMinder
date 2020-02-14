@@ -18,20 +18,22 @@ class MovieSchedule extends React.Component {
       />
     ));
     return (
-      <div className="col-xs-12 col-md-6">
-        <h4>{movie.title}</h4>
-        <Table striped responsive>
-          <thead>
-            <tr>
-              <th scope="col">Theatre</th>
-              <th scope="col">Time</th>
-              <th scope="col">Tickets</th>
-            </tr>
-          </thead>
-          <tbody>
-            {showtimes}
-          </tbody>
-        </Table>
+      <div className="col-xs-12 col-md-6 MovieSchedule">
+        <div className="card">
+          <h4>{movie.title}</h4>
+          <Table striped responsive>
+            <thead>
+              <tr>
+                <th scope="col">Theatre</th>
+                <th scope="col">Time</th>
+                <th scope="col">Tickets</th>
+              </tr>
+            </thead>
+            <tbody>
+              {showtimes}
+            </tbody>
+          </Table>
+        </div>
       </div>
     )
   }

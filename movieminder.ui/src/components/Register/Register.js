@@ -47,19 +47,23 @@ class Register extends React.Component {
   render() {
     const { profile } = this.state;
     return (
-      <div className="row justify-content-center pt-5 text-left">
-        <Form className="col-6" onSubmit={this.submitRegisterForm}>
-          <FormGroup>
-            <div className="lead">Looks like you don't have an account yet. Please register below!</div>
-          </FormGroup>
-          <FormGroup>
-            <Label for="user-username">Username</Label>
-            <Input type="text" name="username" id="user-username" placeholder="Username" value={profile.username} onChange={this.updateUsername} />
-            <Label for="user-zip">Zipcode</Label>
-            <Input type="text" name="zip" id="user-zip" placeholder="Zip" value={profile.zip} onChange={this.updateZip} />
-          </FormGroup>
-          <Button type="submit">Register</Button>
-        </Form>
+      <div className="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 justify-content-center text-left">
+        <div className="card">
+          <div className="card-body">
+            <Form onSubmit={this.submitRegisterForm}>
+              <FormGroup>
+                <div className="lead">Looks like you don't have an account yet. Please register below!</div>
+              </FormGroup>
+              <FormGroup>
+                <Label for="user-username">Username</Label>
+                <Input type="text" name="username" id="user-username" placeholder="Username" value={profile.username} onChange={this.updateUsername} />
+                <Label for="user-zip">Zipcode</Label>
+                <Input type="text" name="zip" id="user-zip" placeholder="Zip" value={profile.zip} onChange={this.updateZip} />
+              </FormGroup>
+              <Button type="submit">Register</Button>
+            </Form>
+          </div>
+        </div>
       </div>
     );
   }
