@@ -47,23 +47,38 @@ class ListMovie extends React.Component {
     return daysOld;
   }
 
+  calculateColor = (daysSinceReleased) => {
+    const colorIndex = Math.floor((daysSinceReleased / 56) * (-200) + 100);
+    if (colorIndex > 200) {
+      return 200;
+    } else if (colorIndex < 0) {
+      return 0;
+    } else {
+      return colorIndex
+    }
+  }
+
   render() {
     const { userMovie } = this.props;
     const daysSinceReleased = this.calculateDaysSinceReleased(userMovie.releaseDate);
+    const color = this.calculateColor(daysSinceReleased);
+    const backgroundColor = {
+      backgroundColor: 'hsla(' + color + ', 60%, 90%, 1)'
+    };
     return (
       <div className="col-xs-12 col-md-6 col-lg-4" key={`userMovie${userMovie.id}`}>
-        <div className="card">
+        <div className="card" style={backgroundColor}>
           <div className="card-body">
             <img className="img-fluid poster" src={userMovie.posterURL} alt="Poster" />
             <h5 className="card-title">{userMovie.title}</h5>
             <p className="card-text">{(daysSinceReleased < 0 ? `Releases in ${-daysSinceReleased} days` : `Released ${daysSinceReleased} days ago`)}</p>
             {(userMovie.watchList ? "" : <Button outline onClick={this.moveToWatchEvent} className="ml-1 mr-1" color="primary">Wanna Watch</Button>)}
-            {(userMovie.seenList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
-            {(userMovie.shameList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
+            {(userMovie.seenList || userMovie.shameList ? "" : <Button outline onClick={this.moveToSeenEvent} className="ml-1 mr-1" color="success">Watched it</Button>)}
+            {(userMovie.shameList || userMovie.seenList ? "" : <Button outline onClick={this.moveToShameEvent} className="ml-1 mr-1" color="warning">Missed it</Button>)}
             <Button outline onClick={this.deleteUserMovieEvent} className="ml-1 mr-1" color="danger">Forget it</Button>
             {/* <Button outline ><i className="fas fa-trash-alt"></i></Button>
             <Button outline ><i className="fas fa-pencil-alt"></i></Button> */}
-{/* 
+            {/* 
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown} inNavbar={false}>
               <DropdownToggle color="dark" caret nav>
                 Account</DropdownToggle>
